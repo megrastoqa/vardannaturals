@@ -126,8 +126,6 @@ vardan-naturals/
 3. **Update Contact Information**
    - Open `index.html`
    - Search for phone numbers and update:
-     - `+91 807 777 5729`
-     - `+91 639 602 1214`
    - Update WhatsApp links
    - Update Instagram handle
 
@@ -239,18 +237,6 @@ Products range from ₹89 to ₹999
 - Most products: ₹249 - ₹499
 - Premium items (Kumkumadi Tailam, Kansa Wand): ₹699 - ₹999
 - Special tools (Double Sided Kansa Wand): ₹999
-
-## 📞 Contact Information
-
-**Phone:**
-- +91 807 777 5729
-- +91 639 602 1214
-
-**WhatsApp:**
-- Available on both numbers above
-
-**Social Media:**
-- Instagram: [@vardannaturals](https://instagram.com/vardannaturals)
 
 ## 🏆 Certifications
 
