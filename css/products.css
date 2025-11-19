@@ -1,0 +1,129 @@
+.product-item {
+  background: white;
+  border: 1px solid #e8e5e0;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 450px 1fr;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+.product-image {
+  align-items: center;
+  background: linear-gradient(135deg, #f5f3f0, #e8e5e0);
+  display: flex;
+  font-size: 6rem;
+  height: 100%;
+  justify-content: center;
+  min-height: 550px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.product-image::before {
+  background: radial-gradient(circle at 30% 50%, rgba(44, 95, 45, 0.03) 0%, transparent 50%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.product-image img {
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.product-details {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 3rem;
+}
+
+.product-name {
+  color: #2c5f2d;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
+}
+
+.product-tagline {
+  color: #8a8a8a;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.product-ingredients {
+  background: #faf9f7;
+  border-left: 3px solid #2c5f2d;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.product-ingredients h4 {
+  color: #2c5f2d;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.product-ingredients p {
+  color: #6a6a6a;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.product-features {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.product-features li {
+  color: #5a5a5a;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.product-features li:before {
+  color: #2c5f2d;
+  content: "•";
+  font-size: 1.5rem;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+}
+
+.product-price {
+  border-top: 1px solid #e8e5e0;
+  color: #2c5f2d;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
