@@ -188,7 +188,7 @@ function checkoutWhatsApp() {
     return;
   }
 
-  const phoneNumber = '919559041204';
+  const phoneNumber = '918077775729';
   let message = `🛒 *New Order from Vardan Naturals Website*\n\n`;
 
   cart.forEach((item, index) => {
@@ -202,7 +202,7 @@ function checkoutWhatsApp() {
   const total = calculateTotal();
   message += `───────────────\n`;
   message += `*Total Amount: ₹${total.toFixed(0)}*\n\n`;
-  message += `Please confirm availability and delivery details. Thank you! 🙏`;
+  message += `Please confirm availability and payment details. Thank you! 🙏`;
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappURL, '_blank');
