@@ -236,3 +236,96 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Cart Link in Navigation - Responsive Fix */
+
+.cart-link-nav {
+  align-items: center;
+  background: #2c5f2d;
+  border-radius: 25px;
+  color: white !important;
+  display: inline-flex;
+  font-size: 0.9rem;
+  gap: 0.3rem;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.cart-link-nav:hover {
+  background: #1a3a1b;
+  transform: scale(1.05);
+}
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .cart-link-nav {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-links li {
+    flex: 1;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+  }
+
+  .cart-link-nav {
+    font-size: 0.75rem;
+    gap: 0.2rem;
+    justify-content: center;
+    padding: 0.4rem 0.6rem;
+  }
+
+  /* Hide "Cart" text on very small screens, show only icon and count */
+  .cart-link-nav .cart-text {
+    display: none;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.3rem;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.3rem;
+  }
+
+  .cart-link-nav {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .logo span {
+    display: none; /* Hide "Vardan Naturals" text on very small screens */
+  }
+}
