@@ -30,7 +30,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="products.html">All Categories</a>
+          <a href="products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="products/hair-care.html">Hair Care Excellence</a>
+          <a href="products/skin-care.html">Radiant Skin Care</a>
+          <a href="products/soaps.html">Artisan Soaps</a>
+          <a href="products/bath-salts.html">Bath Salts</a>
+          <a href="products/essential-oils.html">Essential Oils</a>
+          <a href="products/wellness.html">Wellness & Specialty Care</a>
+          <a href="products/gut-care.html">Herbal Gut Care</a>
+          <a href="products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="cart.html" class="cart-link-nav">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -66,1046 +81,125 @@
   <img alt="Vardan Naturals Products" src="images/vardan-naturals-hero-banner.jpg"
        style="width: 100%; height: auto; display: block; max-height: 600px; object-fit: cover;"/>
 </section>
-<section class="categories" id="products">
-  <h2 class="section-title">Our Collection</h2>
-  <p class="section-subtitle">Discover the ancient wisdom of Ayurveda in every product</p>
-  <!-- Pain Relief Solutions -->
-  <div class="category" id="pain-relief">
-    <h3>Pain Relief Solutions</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Mahanarayana Tailam" src="images/mahanarayana-tailam.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Mahanarayana Tailam</div>
-        <div class="product-tagline">Relief in every drop</div>
-        <p class="product-description">A classical Ayurvedic formulation known for its soothing and rejuvenating
-          properties. It helps relieve joint pain, muscle stiffness, and supports healthy mobility.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Sesame Oil, Ashwagandha, Bala Panchang, Dashmool, Shatavari, Rasna, Turmeric, Licorice,
-            Himalayan Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Relieves joint pain and muscle stiffness</li>
-          <li>Supports healthy mobility</li>
-          <li>Use twice daily or as directed</li>
-        </ul>
-        <div class="product-price">₹449 (100ml) | ₹799 (200ml)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;">
-          <select class="variant-select" id="variant-select-1">
-          <option data-price="₹449" value="100ml">100ml — ₹449</option>
-          <option data-price="₹799" value="200ml">200ml — ₹799</option>
-          </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/mahanarayana-tailam.jpg"
-                  data-name="Mahanarayana Tailam" data-variant-selector="#variant-select-1">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Dashmool Tailam" src="images/dashmool-tailam.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Dashmool Tailam</div>
-        <div class="product-tagline">Relief in every drop</div>
-        <p class="product-description">A classical Ayurvedic oil made from ten powerful roots. Helps relieve pain,
-          stiffness, and inflammation in muscles &amp; joints. Regular massage boosts circulation, relaxes muscles, and
-          supports joint health.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Sesame Oil, Dashmool (10 Roots: Bilva, Agnimantha, Shyonaka, Gambhari, Patala, Shalparni,
-            Prishniparni, Brihati, Kantakari, Gokshura), Himalayan Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Relieves pain, stiffness, and inflammation</li>
-          <li>Boosts circulation and supports joint health</li>
-          <li>Made from ten powerful roots</li>
-        </ul>
-        <div class="product-price">₹449 (100ml) | ₹799 (200ml)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-2">
-          <option data-price="₹449" value="100ml">100ml — ₹449</option>
-          <option data-price="₹799" value="200ml">200ml — ₹799</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/dashmool-tailam.jpg"
-                  data-name="Dashmool Tailam" data-variant-selector="#variant-select-2">🛒 Add to Cart
-          </button>
-        </div>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Abhyangam Tailam" src="images/abhyangam-tailam.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Abhyangam Tailam</div>
-        <div class="product-tagline">Relax. Refresh. Rejuvenate.</div>
-        <p class="product-description">A classical Ayurvedic oil specially formulated for daily full-body massage
-          (Abhyanga). It nourishes the skin, strengthens muscles &amp; joints, relieves fatigue, improves circulation
-          and
-          promotes relaxation &amp; wellness.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Sesame Oil, Bala Mool, Bala Panchang, Ashwagandha, Rasna, Eranda, Shatavari, Dashmool,
-            Manjistha, Chandan, Himalayan Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Nourishes skin and strengthens muscles</li>
-          <li>Relieves fatigue and improves circulation</li>
-          <li>Promotes relaxation and wellness</li>
-        </ul>
-        <div class="product-price">₹449 (100ml) | ₹799 (200ml)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-3">
-          <option data-price="₹449" value="100ml">100ml — ₹449</option>
-          <option data-price="₹799" value="200ml">200ml — ₹799</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/abhyangam-tailam.jpeg"
-                  data-name="Abhyangam Tailam" data-variant-selector="#variant-select-3">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Hair Care -->
-  <div class="category" id="hair-care">
-    <h3>Hair Care Excellence</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Keshamrit Hair Oil" src="images/keshamrit-hair-oil.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Keshamrit Hair Oil</div>
-        <div class="product-tagline">Nourish your roots, flaunt your shine</div>
-        <p class="product-description">Premium blend of cold-pressed natural oils and herbal extracts, carefully crafted
-          to strengthen roots, reduce hair fall, and promote healthy growth. Free from mineral oils, parabens and
-          harmful chemicals.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Brahmi, Jatamansi, Hibiscus, Rosemary, Kalonji, Methi, Himalayan
-            Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Strengthens roots and reduces hair fall</li>
-          <li>Free from mineral oils and parabens</li>
-          <li>Suitable for all hair types</li>
-          <li>Use twice weekly for best results</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/keshamrit-hair-oil.jpeg"
-                data-name="Keshamrit Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Anti-Dandruff Hair Oil" src="images/anti-dandruff-hair-oil.png"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Anti-Dandruff Hair Oil</div>
-        <div class="product-tagline">Nourish your roots, flaunt your shine</div>
-        <p class="product-description">This gentle yet effective oil combines ancient herbal wisdom with modern
-          hair-care science. Regular use helps control dandruff, soothe irritation and maintain a healthy scalp
-          environment. Leaves hair soft, shiny and manageable.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Kushta, Mulethi, Triphala, Manjistha, Neem Patra, Himalayan
-            Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Controls dandruff and soothes irritation</li>
-          <li>Maintains healthy scalp environment</li>
-          <li>Leaves hair soft and shiny</li>
-          <li>Gentle yet effective formula</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/anti-dandruff-hair-oil.png"
-                data-name="Anti-Dandruff Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Skin Care -->
-  <div class="category" id="skin-care">
-    <h3>Radiant Skin Care</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Kumkumadi Tailam" src="images/kumkumadi-tailam.png"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Kumkumadi Tailam</div>
-        <div class="product-tagline">Glow like Saffron, Shine like Gold</div>
-        <p class="product-description">A classical Ayurvedic facial oil prepared from saffron (kumkuma) and a blend of
-          precious herbs infused in sesame oil. Traditionally known as a "miraculous beauty elixir" for its ability to
-          improve skin texture, radiance and tone naturally.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Kashmiri Saffron (Kumkuma), Sandalwood (Chandana), Manjistha, Licorice (Mulethi), Vetiver (Usheera), Blue
-            Lotus (Neelotpala), Indian Madder (Lodhra), Goat Milk, Cold Pressed Sesame Oil</p>
-        </div>
-        <ul class="product-features">
-          <li>Brightens and enhances natural skin glow</li>
-          <li>Reduces dark spots, pigmentation &amp; blemishes</li>
-          <li>Improves skin texture &amp; elasticity</li>
-          <li>Helps reduce appearance of fine lines</li>
-        </ul>
-        <div class="product-price">₹699 (30ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/kumkumadi-tailam.png"
-                data-name="Kumkumadi Tailam" data-price="₹699" value="30ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Cocoa Butter Moisturizer" src="images/cocoa-butter-moisturizer.png"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Cocoa Butter Moisturiser</div>
-        <div class="product-tagline">Indulge Your Skin in Cocoa Love</div>
-        <p class="product-description">Rich, creamy blend of natural cocoa butter &amp; nourishing oils that melts into
-          the
-          skin, deeply hydrating and protecting for a smooth, radiant glow.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Castor Oil, Coconut Oil, Shea Butter, Cocoa Butter, Cetyl Alcohol, Stearyl Alcohol, Glyceryl Stearate,
-            Stearic Acid, Vitamin E, Distilled Water</p>
-        </div>
-        <ul class="product-features">
-          <li>Deeply hydrates and protects skin</li>
-          <li>Rich blend of natural butters and oils</li>
-          <li>Suitable for all skin types</li>
-        </ul>
-        <div class="product-price">₹449 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/cocoa-butter-moisturizer.png"
-                data-name="Cocoa Butter Moisturiser" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Rosemary Hydrosol" src="images/rosemary-hydrosol.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Rosemary Hydrosol</div>
-        <div class="product-tagline">Nature's Mist for Skin &amp; Hair Bliss</div>
-        <p class="product-description">100% Natural &amp; Pure Steam-Distilled Rosemary Hydrosol. A refreshing botanical
-          water to tone, hydrate &amp; invigorate skin &amp; hair.</p>
-        <ul class="product-features">
-          <li>100% pure steam-distilled botanical water</li>
-          <li>Tones and hydrates skin naturally</li>
-          <li>Invigorates skin and hair</li>
-          <li>Suitable for all skin types</li>
-        </ul>
-        <div class="product-price">₹449 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/rosemary-hydrosol.jpg"
-                data-name="Rosemary Hydrosol" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Triphala Charcoal Face Wash" src="images/triphala-charcoal-face-wash.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Triphala Charcoal Face Wash</div>
-        <p class="product-description">Ayurvedic face wash infused with Triphala and activated charcoal. Detoxifies
-          pores, removes impurities, and restores natural glow.</p>
-        <ul class="product-features">
-          <li>Detoxifies pores with activated charcoal</li>
-          <li>Removes impurities effectively</li>
-          <li>Restores natural glow</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/triphala-charcoal-face-wash.jpeg"
-                data-name="Triphala Charcoal Face Wash" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Aloe Vera-Neem-Tea Tree Face Wash" src="images/aloevera-neem-teatree-face-wash.png"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Aloe Vera-Neem-Tea Tree Face Wash</div>
-        <p class="product-description">Herbal face wash with Aloe Vera, Neem, and Tea Tree Oil that purifies skin,
-          controls acne, and leaves it fresh and clear.</p>
-        <ul class="product-features">
-          <li>Purifies skin naturally</li>
-          <li>Controls acne effectively</li>
-          <li>Leaves skin fresh and clear</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/aloevera-neem-teatree-face-wash.png"
-                data-name="Aloe Vera-Neem-Tea Tree Face Wash" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Aloe Vera Gel" src="images/aloevera-gel.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Aloe Vera Gel</div>
-        <p class="product-description">Pure Aloe Vera gel that hydrates, soothes, and nourishes skin for a fresh,
-          healthy glow.</p>
-        <ul class="product-features">
-          <li>100% pure Aloe Vera gel</li>
-          <li>Hydrates and soothes skin</li>
-          <li>Perfect for all skin types</li>
-        </ul>
-        <div class="product-price">₹249 (50g)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/aloevera-gel.jpg" data-name="Aloe Vera Gel"
-                data-price="₹249" value="50g">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Artisan Soaps -->
-  <div class="category" id="soaps">
-    <h3>Artisan Soaps Collection</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Shea Butter Soap" src="images/shea-butter-soap.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Shea Butter Soap</div>
-        <div class="product-tagline">Zest Up Your Skin - Lemongrass Meets Shea Bliss!</div>
-        <p class="product-description">Organic soap with lemongrass and shea butter. No parabens, no sulphates, no
-          chlorides.</p>
-        <div class="product-price">₹249 (100g) | ₹170 (55g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-4">
-          <option data-price="₹249" value="100g">100g — ₹249</option>
-          <option data-price="₹170" value="55g">55g — ₹170</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/shea-butter-soap.jpg"
-                  data-name="Shea Butter Soap" data-variant-selector="#variant-select-4">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Triphala Charcoal Soap" src="images/triphala-charcoal-soap.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Triphala Charcoal Soap</div>
-        <div class="product-tagline">Detox Deep. Breathe Easy. Lavender Calm in Every Bar.</div>
-        <p class="product-description">Organic soap with activated charcoal and lavender. No parabens, no sulphates.</p>
-        <div class="product-price">₹225 (100g) | ₹150 (55g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-5">
-          <option data-price="₹225" value="100g">100g — ₹225</option>
-          <option data-price="₹150" value="55g">55g — ₹150</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/triphala-charcoal-soap.jpg"
-                  data-name="Triphala Charcoal Soap" data-variant-selector="#variant-select-5">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Citrus Loofah Soap" src="images/citrus-loofah-soap.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Citrus Loofah Soap</div>
-        <div class="product-tagline">Scrub Zesty, Stay Fresh - It's a Lemon Loofah Thing.</div>
-        <p class="product-description">Natural exfoliation with citrus energy. Organic soap with no parabens, no
-          sulphates, no chlorides.</p>
-        <div class="product-price">₹200 (100g) | ₹140 (55g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-6">
-          <option data-price="₹200" value="100g">100g — ₹200</option>
-          <option data-price="₹140" value="55g">55g — ₹140</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/citrus-loofah-soap.jpg"
-                  data-name="Citrus Loofah Soap" data-variant-selector="#variant-select-6">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Goat Milk Soap" src="images/goat-milk-soap.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Goat Milk Soap</div>
-        <div class="product-tagline">Lemongrass Energy. Goat Milk Luxury. Skin in Balance.</div>
-        <p class="product-description">Luxurious goat milk soap with lemongrass. Organic, no parabens, no sulphates, no
-          chlorides.</p>
-        <div class="product-price">₹275 (100g) | ₹190 (55g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-7">
-          <option data-price="₹275" value="100g">100g — ₹275</option>
-          <option data-price="₹190" value="55g">55g — ₹190</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/goat-milk-soap.jpg" data-name="Goat Milk Soap"
-                  data-variant-selector="#variant-select-7">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Bath Salts -->
-  <div class="category" id="bath-salts">
-    <h3>Luxurious Bath Salts</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Rose Indulgence Bath Salt" src="images/rose-indulgence-bath-salt.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Rose Indulgence</div>
-        <div class="product-tagline">Wrap yourself in the luxury of pure rose petals</div>
-        <p class="product-description">Luxurious rose petals &amp; essential oil with mineral salts for a romantic,
-          skin-softening soak.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Himalayan Pink Salt, Epsom Salt, Rose Essential Oil, Rose Petals</p>
-        </div>
-        <ul class="product-features">
-          <li>Add 2-3 tablespoons to warm bath water</li>
-          <li>Swirl and soak for 15-20 minutes</li>
-          <li>Romantic, skin-softening experience</li>
-        </ul>
-        <div class="product-price">₹499 (400g) | ₹299 (200g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-8">
-          <option data-price="₹499" value="400g">400g — ₹499</option>
-          <option data-price="₹299" value="200g">200g — ₹299</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/rose-indulgence-bath-salt.jpg"
-                  data-name="Rose Indulgence" data-variant-selector="#variant-select-8">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lavender Calm Bath Salt" src="images/lavender-calm-bath-salt.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lavender Calm</div>
-        <div class="product-tagline">Unwind &amp; drift into serenity with soothing lavender</div>
-        <p class="product-description">Soothing lavender essential oil with mineral salts for deep relaxation &amp;
-          restful
-          sleep.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Himalayan Pink Salt, Lavender Essential Oil, Dried Botanicals</p>
-        </div>
-        <ul class="product-features">
-          <li>Add 2-3 tablespoons to warm bath water</li>
-          <li>Swirl and soak for 15-20 minutes</li>
-          <li>Promotes deep relaxation</li>
-        </ul>
-        <div class="product-price">₹499 (400g) | ₹299 (200g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-9">
-          <option data-price="₹499" value="400g">400g — ₹499</option>
-          <option data-price="₹299" value="200g">200g — ₹299</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/lavender-calm-bath-salt.jpg"
-                  data-name="Lavender Calm" data-variant-selector="#variant-select-9">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Green Apple Fresh Bath Salt" src="images/green-apple-fresh-bath-salt.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Green Apple Fresh</div>
-        <div class="product-tagline">Revive your spirit with crisp green apple freshness</div>
-        <p class="product-description">Crisp green apple fragrance blended with Himalayan &amp; Epsom salts for a
-          refreshing
-          spa soak.</p>
-        <ul class="product-features">
-          <li>Add 2-3 tablespoons to warm bath water</li>
-          <li>Swirl and soak for 15-20 minutes</li>
-          <li>Refreshing spa experience</li>
-        </ul>
-        <div class="product-price">₹499 (400g) | ₹299 (200g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-10">
-          <option data-price="₹499" value="400g">400g — ₹499</option>
-          <option data-price="₹299" value="200g">200g — ₹299</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/green-apple-fresh-bath-salt.jpg"
-                  data-name="Green Apple Fresh" data-variant-selector="#variant-select-10">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Citrus Bliss Bath Salt" src="images/citrus-bliss-bath-salt.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Citrus Bliss</div>
-        <div class="product-tagline">Awaken your senses with a burst of citrus energy</div>
-        <p class="product-description">A revitalising blend of Himalayan salt, Epsom salt &amp; citrus essential oils to
-          refresh body &amp; mind.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Himalayan Pink Salt, Epsom Salt, Citrus Essential Oil, Dried Botanicals</p>
-        </div>
-        <ul class="product-features">
-          <li>Add 2-3 tablespoons to warm bath water</li>
-          <li>Swirl and soak for 15-20 minutes</li>
-          <li>Awakens senses and refreshes</li>
-        </ul>
-        <div class="product-price">₹499 (400g) | ₹299 (200g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-11">
-          <option data-price="₹499" value="400g">400g — ₹499</option>
-          <option data-price="₹299" value="200g">200g — ₹299</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/citrus-bliss-bath-salt.jpg"
-                  data-name="Citrus Bliss" data-variant-selector="#variant-select-11">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Essential Oils -->
-  <div class="category" id="essential-oils">
-    <h3>Essential Oils Collection</h3>
-    <p style="margin-bottom: 3rem; color: #6a6a6a; font-size: 1.1rem; text-align: center; font-weight: 300;">100% Pure
-      Essential Oils – Botanical Bliss in a Bottle. Steam-distilled and crafted to rejuvenate your body and mind.</p>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Jasmine Essential Oil" src="images/jasmine-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Jasmine Essential Oil</div>
-        <p class="product-description">Sweet floral aroma that uplifts mood and promotes relaxation.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Promotes relaxation &amp; emotional balance</li>
-          <li>Always dilute before skin application</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/jasmine-essential-oil.jpg"
-                data-name="Jasmine Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lavender Essential Oil" src="images/lavender-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lavender Essential Oil</div>
-        <p class="product-description">Calming scent that eases stress and supports restful sleep.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Eases stress and promotes sleep</li>
-          <li>Natural air purifier</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/lavender-essential-oil.jpg"
-                data-name="Lavender Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lemongrass Essential Oil" src="images/lemongrass-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lemongrass Essential Oil</div>
-        <p class="product-description">Fresh citrus aroma that energises and purifies air naturally.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Energises and purifies air</li>
-          <li>Refreshing citrus scent</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/lemongrass-essential-oil.jpg"
-                data-name="Lemongrass Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Green Apple Essential Oil" src="images/green-apple-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Green Apple Essential Oil</div>
-        <p class="product-description">Crisp fruity fragrance that refreshes and invigorates senses.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Refreshes and invigorates</li>
-          <li>Crisp, uplifting aroma</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/green-apple-essential-oil.jpg"
-                data-name="Green Apple Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Citrus Essential Oil" src="images/citrus-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Citrus Essential Oil</div>
-        <p class="product-description">Refreshing, mood-lifting natural purifier that boosts focus and freshness.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Boosts focus and freshness</li>
-          <li>Mood-lifting properties</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/citrus-essential-oil.jpg"
-                data-name="Citrus Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Wellness Roll-Ons & Specialty Care -->
-  <div class="category" id="wellness">
-    <h3>Wellness Roll-Ons &amp; Specialty Care</h3>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Belly Bliss Roll-On" src="images/belly-bliss-rollon.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Belly Bliss Roll-On</div>
-        <div class="product-tagline">Quick relief, Gentle touch</div>
-        <p class="product-description">Quick relief with peppermint, ajwain, and ginger extracts. Gentle touch for
-          digestive comfort.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Peppermint Extract, Ajwain Extract, Hing Extract, Fennel Extract, Ginger Extract, Castor Oil, Eucalyptus
-            Extract, Camphor Extract</p>
-        </div>
-        <ul class="product-features">
-          <li>Roll gently over stomach area</li>
-          <li>Massage in circular motions</li>
-          <li>Use 2-3 times daily as needed</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/belly-bliss-rollon.jpg"
-                data-name="Belly Bliss Roll-On" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Tranquil Roll-On" src="images/tranquil-rollon.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Tranquil Roll-On</div>
-        <div class="product-tagline">Instant Serenity, Anytime</div>
-        <p class="product-description">Instant serenity with peppermint, camphor, and Himalayan herbs. Anytime
-          relaxation.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Peppermint Extract, Ajwain Extract, Camphor Extract, Himalayan Herbs</p>
-        </div>
-        <ul class="product-features">
-          <li>Roll on temples and pulse points</li>
-          <li>Use whenever you need calm</li>
-          <li>Portable relaxation solution</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/tranquil-rollon.jpg" data-name="Tranquil Roll-On"
-                data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Crack Cream" src="images/crack-cream.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Crack Cream</div>
-        <p class="product-description">Enriched with Shea Butter, Coconut Oil, Beeswax, and Aloe Vera for soft,
-          crack-free heels and deeply nourished skin.</p>
-        <ul class="product-features">
-          <li>Heals cracked heels effectively</li>
-          <li>Deeply nourishes skin</li>
-          <li>Rich natural ingredients</li>
-        </ul>
-        <div class="product-price">₹299 (30g)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/crack-cream.jpeg" data-name="Crack Cream"
-                data-price="₹299" value="30g">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <div class="image-carousel" id="lipBalm-carousel">
-          <div class="carousel-images">
-            <div class="carousel-slide">
-              <img alt="Rose Lip Balm" src="images/lip-balm-rose.jpg">
-            </div>
-            <div class="carousel-slide">
-              <img alt="Green Apple Lip Balm" src="images/lip-balm-green-apple.jpg">
-            </div>
-          </div>
 
-          <button class="carousel-btn prev" onclick="move('lipBalm-carousel', -1)">‹</button>
-          <button class="carousel-btn next" onclick="move('lipBalm-carousel', 1)">›</button>
 
-          <div class="carousel-indicators">
-            <button class="carousel-indicator active" onclick="goToSlide('lipBalm-carousel', 0)"></button>
-            <button class="carousel-indicator" onclick="goToSlide('lipBalm-carousel', 1)"></button>
-          </div>
+<!-- Featured Products Section (OPTIONAL - Show 3-6 bestsellers) -->
+<section class="featured-products" style="padding: 80px 2rem; background: white;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <h2 style="text-align: center; font-size: 2.5rem; color: #2c5f2d; margin-bottom: 1rem; font-weight: 300; letter-spacing: 3px;">Featured Products</h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #6a6a6a; margin-bottom: 3rem;">Discover our most loved Ayurvedic essentials</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+      <!-- Featured Product 1 -->
+      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
+        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
+          <img src="images/kumkumadi-tailam.png" alt="Kumkumadi Tailam" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Kumkumadi Tailam</h3>
+          <p style="color: #6a6a6a; margin-bottom: 1rem;">Miraculous beauty elixir with Kashmiri saffron</p>
+          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹699</div>
+          <a href="products/skin-care.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+            View Details
+          </a>
         </div>
       </div>
 
-      <div class="product-details">
-        <div class="product-name">Lip Balms</div>
-        <p class="product-description">Rose and Green Apple variants. Nourishing care for soft, smooth lips.</p>
-        <ul class="product-features">
-          <li>Available in Rose and Green Apple</li>
-          <li>Nourishes and protects lips</li>
-          <li>Natural ingredients</li>
-        </ul>
-        <div class="product-price">₹249 each (15g)</div>
-
-        <!-- VARIANT SELECT + BUTTON -->
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;">
-          <select class="variant-select" id="lipbalm-variant">
-            <option data-image="images/lip-balm-rose.jpg"
-                    data-price="₹249"
-                    value="Rose (15g)">
-              Rose (15g) — ₹249
-            </option>
-
-            <option data-image="images/lip-balm-green-apple.jpg"
-                    data-price="₹249"
-                    value="Green Apple (15g)">
-              Green Apple (15g) — ₹249
-            </option>
-          </select>
-
-          <button
-            class="btn-primary add-to-cart-btn"
-            data-name="Lip Balm"
-            data-variant-selector="#lipbalm-variant">
-            🛒 Add to Cart
-          </button>
+      <!-- Featured Product 2 -->
+      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
+        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
+          <img src="images/keshamrit-hair-oil.jpeg" alt="Keshamrit Hair Oil" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Keshamrit Hair Oil</h3>
+          <p style="color: #6a6a6a; margin-bottom: 1rem;">Premium blend for healthy, shiny hair</p>
+          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹499</div>
+          <a href="products/hair-care.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+            View Details
+          </a>
         </div>
       </div>
+
+      <!-- Featured Product 3 -->
+      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
+        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
+          <img src="images/mahanarayana-tailam.jpg" alt="Mahanarayana Tailam" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Mahanarayana Tailam</h3>
+          <p style="color: #6a6a6a; margin-bottom: 1rem;">Relief for joint pain and muscle stiffness</p>
+          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹449</div>
+          <a href="products/pain-relief.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+            View Details
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="product-item">
-      <div class="product-image">
-        <div class="image-carousel" id="sachets-carousel">
-          <div class="carousel-images">
-            <div class="carousel-slide">
-              <img alt="Citrus Bliss Sachet" src="images/citrus-sachet.jpg"/>
-            </div>
-            <div class="carousel-slide">
-              <img alt="Lavender Calm Sachet" src="images/lavender-sachet.jpg"/>
-            </div>
-          </div>
-          <button class="carousel-btn prev" onclick="move('sachets-carousel', -1)">‹</button>
-          <button class="carousel-btn next" onclick="move('sachets-carousel', 1)">›</button>
-          <div class="carousel-indicators">
-            <button class="carousel-indicator active" onclick="goToSlide('sachets-carousel', 0)"></button>
-            <button class="carousel-indicator" onclick="goToSlide('sachets-carousel', 1)"></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Wardrobe Sachets</div>
-        <p class="product-description">Citrus Bliss and Lavender Calm variants. Natural freshness with rice, Himalayan
-          herbs, and essential oils. No artificial fragrances.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Rice, Himalayan Herbs, Essential Oil Blend, No Artificial Fragrances</p>
-        </div>
-        <ul class="product-features">
-          <li>Lasts 1-2 months</li>
-          <li>Available in Citrus Bliss and Lavender Calm</li>
-          <li>100% natural fragrance</li>
-        </ul>
-        <div class="product-price">₹349 each (100g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-sachet-1">
-          <option data-image="images/citrus-sachet.jpg" data-price="₹349" value="Citrus Bliss (100g)">Citrus Bliss
-            (100g) — ₹349
-          </option>
-          <option data-image="images/lavender-sachet.jpg" data-price="₹349" value="Lavender Calm (100g)">Lavender Calm
-            (100g) — ₹349
-          </option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-name="Wardrobe Sachets"
-                  data-variant-selector="#variant-sachet-1">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Herbal Gut Care -->
-    <div class="category" id="gut-care">
-      <h3>Herbal Gut Care</h3>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Natural Digestive Support" src="images/herbal-gutcare.jpeg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Natural Digestive Support</div>
-          <p class="product-description">Ayurvedic herbal blend formulated to provide natural relief from gas, acidity,
-            bloating and constipation. This gentle digestive support helps improve appetite and strengthens the
-            digestive
-            fire (Agni) for better absorption of nutrients.</p>
-          <div class="product-ingredients">
-            <h4>Key Ingredients</h4>
-            <p>Fennel, Cumin, Carom Seeds/Ajwain, Haritaki, Baheda, Amla, Dry Ginger, Rock Salt, Asafoetida, Mint
-              Extract
-              (Pudina Satva), Himalayan Herbs</p>
-          </div>
-          <ul class="product-features">
-            <li>Relieves gas &amp; bloating</li>
-            <li>Eases acidity &amp; indigestion</li>
-            <li>Supports regular bowel movement</li>
-            <li>Improves appetite &amp; metabolism</li>
-            <li>Natural &amp; non-habit forming</li>
-          </ul>
-          <div class="product-price">₹145 (60g)</div>
-          <button class="btn-primary add-to-cart-btn" data-image="images/herbal-gutcare.jpeg"
-                  data-name="Natural Digestive Support" data-price="₹145" value="60g">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Herbal Tea -->
-    <div class="category" id="tea">
-      <h3>Premium Herbal Tea Collection</h3>
-      <p style="margin-bottom: 3rem; color: #6a6a6a; font-size: 1.1rem; text-align: center; font-weight: 300;">A
-        thoughtfully curated range of natural, caffeine-free teas crafted to rejuvenate your body, calm your mind, and
-        elevate every sip.</p>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Hibiscus Tea" src="images/hibiscus-tea.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Hibiscus Tea</div>
-          <p class="product-description">A vibrant, tangy brew rich in antioxidants that revitalizes your body and
-            uplifts
-            your mood.</p>
-          <ul class="product-features">
-            <li>Rich in antioxidants</li>
-            <li>Vibrant, tangy flavor</li>
-            <li>Revitalizes and uplifts</li>
-            <li>Caffeine-free</li>
-          </ul>
-          <div class="product-price">₹99 (10g) | ₹179 (20g)</div>
-          <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                  id="variant-select-12">
-            <option data-price="₹99" value="10g">10g — ₹99</option>
-            <option data-price="₹179" value="20g">20g — ₹179</option>
-          </select>
-            <button class="btn-primary add-to-cart-btn" data-image="images/hibiscus-tea.jpg" data-name="Hibiscus Tea"
-                    data-variant-selector="#variant-select-12">🛒 Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Chamomile Tea" src="images/chamomile-tea.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Chamomile Tea</div>
-          <p class="product-description">A soothing floral infusion that relaxes the mind and promotes peaceful
-            sleep.</p>
-          <ul class="product-features">
-            <li>Soothing floral infusion</li>
-            <li>Relaxes the mind</li>
-            <li>Promotes peaceful sleep</li>
-            <li>Caffeine-free</li>
-          </ul>
-          <div class="product-price">₹149 (10g) | ₹259 (20g)</div>
-          <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                  id="variant-select-13">
-            <option data-price="₹149" value="10g">10g — ₹149</option>
-            <option data-price="₹259" value="20g">20g — ₹259</option>
-          </select>
-            <button class="btn-primary add-to-cart-btn" data-image="images/chamomile-tea.jpg" data-name="Chamomile Tea"
-                    data-variant-selector="#variant-select-13">🛒 Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Lemongrass Tea" src="images/lemongrass-tea.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Lemongrass Tea</div>
-          <p class="product-description">A refreshing, citrus-scented detox tea that awakens the senses and supports
-            digestion.</p>
-          <ul class="product-features">
-            <li>Refreshing citrus scent</li>
-            <li>Natural detox properties</li>
-            <li>Supports digestion</li>
-            <li>Awakens the senses</li>
-          </ul>
-          <div class="product-price">₹89 (15g) | ₹159 (30g)</div>
-          <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                  id="variant-select-14">
-            <option data-price="₹89" value="15g">15g — ₹89</option>
-            <option data-price="₹159" value="30g">30g — ₹159</option>
-          </select>
-            <button class="btn-primary add-to-cart-btn" data-image="images/lemongrass-tea.jpg"
-                    data-name="Lemongrass Tea" data-variant-selector="#variant-select-14">🛒 Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Blue Pea Tea" src="images/blue-pea-tea.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Blue Pea Tea</div>
-          <p class="product-description">A mesmerizing blue infusion brimming with antioxidants for radiant skin and
-            calm
-            energy.</p>
-          <ul class="product-features">
-            <li>Mesmerizing blue color</li>
-            <li>Rich in antioxidants</li>
-            <li>Promotes radiant skin</li>
-            <li>Calm, natural energy</li>
-          </ul>
-          <div class="product-price">₹179 (10g) | ₹299 (20g)</div>
-          <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                  id="variant-select-15">
-            <option data-price="₹179" value="10g">10g — ₹179</option>
-            <option data-price="₹299" value="20g">20g — ₹299</option>
-          </select>
-            <button class="btn-primary add-to-cart-btn" data-image="images/blue-pea-tea.jpg" data-name="Blue Pea Tea"
-                    data-variant-selector="#variant-select-15">🛒 Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Wellness Tools -->
-    <div class="category" id="tools">
-      <h3>Wellness Tools</h3>
-      <p style="margin-bottom: 3rem; color: #6a6a6a; font-size: 1.1rem; text-align: center; font-weight: 300;">A curated
-        range of Ayurvedic tools crafted to elevate your self-care rituals. Thoughtfully handmade to support pain
-        relief, relaxation, and radiant skin.</p>
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Pain Relief Ayurvedic Massage Potli" src="images/massage-potli.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Pain Relief Ayurvedic Massage Potli</div>
-          <div class="product-tagline">Quick Relief from Pain &amp; Inflammation</div>
-          <p class="product-description">100% natural herbal dry fomentation that provides quick relief from pain &amp;
-            inflammation. Helps reduce joint stiffness &amp; muscular tension while promoting better blood
-            circulation.</p>
-          <div class="product-ingredients">
-            <h4>Key Ingredients</h4>
-            <p>Sandalwood, Rock Salt, Rice Flower, Ajwain, Herbal Aromatic Powders</p>
-          </div>
-          <ul class="product-features">
-            <li>Provides quick relief from pain &amp; inflammation</li>
-            <li>Helps reduce joint stiffness &amp; muscular tension</li>
-            <li>Promotes better blood circulation</li>
-            <li>Ideal for back, neck, knee, shoulder pain</li>
-            <li>Relaxes tired muscles and supports natural healing</li>
-          </ul>
-          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-            <h4
-              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-              How to Use</h4>
-            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Heat the potli lightly on a pan/tawa for a
-              few
-              seconds. Test temperature on the back of your hand. Apply warm potli on painful areas in circular &amp;
-              tapping
-              motions. Use for 10–15 minutes. Reheat and reuse as needed.</p>
-          </div>
-          <div class="product-price">₹299</div>
-          <button class="btn-primary add-to-cart-btn" data-image="images/massage-potli.jpg"
-                  data-name="Pain Relief Ayurvedic Massage Potli" data-price="₹299">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-      <!-- Kansa Wand -->
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Kansa Wand" src="images/kansa-wand.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Kansa Wand</div>
-          <p class="product-description">100% Pure Kansa (Bronze) dome with premium wooden handle. Balances skin's pH,
-            reduces inflammation, puffiness &amp; dullness. Enhances blood circulation, promotes lymphatic drainage and
-            gives
-            a natural facial glow.</p>
-          <ul class="product-features">
-            <li>Balances the skin's pH naturally</li>
-            <li>Reduces inflammation, puffiness &amp; dullness</li>
-            <li>Enhances blood circulation &amp; lymphatic drainage</li>
-            <li>Detoxifies skin and gives a natural glow</li>
-            <li>Excellent for daily facial massage &amp; stress relief</li>
-            <li>Suitable for all skin types</li>
-          </ul>
-          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-            <h4
-              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-              How to Use</h4>
-            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply a few drops of facial oil or serum and
-              gently massage face and neck in circular motions for 5–10 minutes. Clean with a soft cloth after use.</p>
-          </div>
-          <div class="product-price">₹699</div>
-          <button class="btn-primary add-to-cart-btn" data-image="images/kansa-wand.jpg" data-name="Kansa Wand"
-                  data-price="₹699">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
-      <!-- Double Sided Kansa Wand -->
-      <div class="product-item">
-        <div class="product-image">
-          <img alt="Double Sided Kansa Wand" src="images/double-sided-kansa-wand.jpg"/>
-        </div>
-        <div class="product-details">
-          <div class="product-name">Double Sided Kansa Wand</div>
-          <p class="product-description">Made from 100% Pure Kansa (Bronze) with dual-sided design for versatile use.
-            Ideal for both facial and body massage. Improves blood flow, lymphatic detox, and helps reduce fatigue,
-            tightness &amp; muscle tension.</p>
-          <ul class="product-features">
-            <li>Dual-sided design for versatile facial &amp; body use</li>
-            <li>Improves blood flow &amp; lymphatic detox</li>
-            <li>Helps reduce fatigue, tightness &amp; muscle tension</li>
-            <li>Enhances skin glow and elasticity</li>
-            <li>Boosts overall well-being</li>
-            <li>Durable handcrafted wooden handle</li>
-          </ul>
-          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-            <h4
-              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-              How to Use</h4>
-            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply facial oil or body oil and massage in
-              circular motions. Use smaller side for face and larger side for body massage. Clean after each use.</p>
-          </div>
-          <div class="product-price">₹999</div>
-          <button class="btn-primary add-to-cart-btn" data-image="images/double-sided-kansa-wand.jpg"
-                  data-name="Double Sided Kansa Wand" data-price="₹999">🛒 Add to Cart
-          </button>
-        </div>
-      </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="products.html" style="display: inline-block; background: #2c5f2d; color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s;">
+        View All Products →
+      </a>
     </div>
   </div>
 </section>
+
+<!-- Categories Preview Section -->
+<section class="categories-preview" style="padding: 80px 2rem; background: #faf9f7;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <h2 style="text-align: center; font-size: 2.5rem; color: #2c5f2d; margin-bottom: 1rem; font-weight: 300; letter-spacing: 3px;">Shop by Category</h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #6a6a6a; margin-bottom: 3rem;">Explore our complete range of Ayurvedic products</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+
+      <a href="products/pain-relief.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Pain Relief</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Ayurvedic massage oils</p>
+      </a>
+
+      <a href="products/hair-care.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">💆</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Hair Care</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Natural hair oils</p>
+      </a>
+
+      <a href="products/skin-care.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Skin Care</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Radiant skin essentials</p>
+      </a>
+
+      <a href="products/soaps.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🧼</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Artisan Soaps</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Handcrafted soaps</p>
+      </a>
+
+      <a href="products/essential-oils.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🌸</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Essential Oils</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Pure botanical oils</p>
+      </a>
+
+      <a href="products/herbal-tea.html" style="text-decoration: none; background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid #e8e5e0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🍵</div>
+        <h3 style="color: #2c5f2d; margin-bottom: 0.5rem; font-size: 1.3rem;">Herbal Teas</h3>
+        <p style="color: #6a6a6a; font-size: 0.9rem;">Wellness teas</p>
+      </a>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="products.html" style="display: inline-block; color: #2c5f2d; padding: 1rem 2.5rem; text-decoration: none; border: 2px solid #2c5f2d; border-radius: 50px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s;">
+        View All Categories
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="about" id="about">
   <div class="about-content">
     <h2>Our Heritage</h2>

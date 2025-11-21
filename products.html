@@ -5,11 +5,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Products - Vardan Naturals</title>
 
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/components.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link href="css/cart.css" rel="stylesheet">
-  <link href="css/products.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet"/>
+  <link href="css/components.css" rel="stylesheet"/>
+  <link href="css/products.css" rel="stylesheet"/>
+  <link href="css/responsive.css" rel="stylesheet"/>
+  <link href="css/cart.css" rel="stylesheet"/>
+  <link href="css/tabs.css" rel="stylesheet"/>
+
 </head>
 <body>
 <header>
@@ -22,7 +24,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="index.html#home">Home</a></li>
-      <li><a href="products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="products.html">All Categories</a>
+          <a href="products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="products/hair-care.html">Hair Care Excellence</a>
+          <a href="products/skin-care.html">Radiant Skin Care</a>
+          <a href="products/soaps.html">Artisan Soaps</a>
+          <a href="products/bath-salts.html">Bath Salts</a>
+          <a href="products/essential-oils.html">Essential Oils</a>
+          <a href="products/wellness.html">Wellness & Specialty Care</a>
+          <a href="products/gut-care.html">Herbal Gut Care</a>
+          <a href="products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -170,7 +187,11 @@
   <p style="margin-top: 0.8rem; font-style: italic; opacity: 0.9;">from nature, with care</p>
 </footer>
 
-<script src="js/cart.js"></script>
 <script src="js/main.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/tabs.js"></script>
+<script defer="" src="js/cart.js"></script>
+
 </body>
 </html>
