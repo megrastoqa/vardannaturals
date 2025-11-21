@@ -126,7 +126,7 @@ function renderCartPage() {
                 <div class="cart-empty-icon">🛍️</div>
                 <h2>Your cart is empty</h2>
                 <p>Looks like you haven't added anything to your cart yet.</p>
-                <a href="index.html#products" class="shop-now-btn">
+                <a href="../index.html#products" class="shop-now-btn">
                     🌿 Start Shopping
                 </a>
             </div>
@@ -420,3 +420,29 @@ function initCartSystem() {
 }
 
 document.addEventListener('DOMContentLoaded', initCartSystem);
+
+// Enhanced Add to Cart for products with and without variants
+// document.addEventListener('DOMContentLoaded', function() {
+//   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+//     button.addEventListener('click', function() {
+//       const productName = this.getAttribute('data-name');
+//       const imageSrc = this.getAttribute('data-image');
+//       const variantSelector = this.getAttribute('data-variant-selector');
+//
+//       if (variantSelector) {
+//         // Product with variants
+//         const selectElement = document.querySelector(variantSelector);
+//         if (selectElement) {
+//           const selectedOption = selectElement.options[selectElement.selectedIndex];
+//           const variant = selectedOption.value;
+//           const price = selectedOption.getAttribute('data-price');
+//           addToCart(productName, price, variant, imageSrc);
+//         }
+//       } else {
+//         // Product without variants
+//         const price = this.getAttribute('data-price');
+//         addToCart(productName, price, '', imageSrc);
+//       }
+//     });
+//   });
+// });

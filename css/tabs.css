@@ -1,0 +1,91 @@
+/* css/tabs.css - Product Tab Navigation */
+
+.product-tabs-container {
+  position: sticky;
+  top: 70px;
+  background: #faf9f7;
+  padding: 1.5rem 0;
+  z-index: 100;
+  border-bottom: 2px solid #e8e5e0;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.product-tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tab-btn {
+  background: white;
+  color: #2c5f2d;
+  border: 2px solid #2c5f2d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  background: #e8f5e9;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: #2c5f2d;
+  color: white;
+  box-shadow: 0 4px 12px rgba(44, 95, 45, 0.3);
+}
+
+.category {
+  display: none;
+}
+
+.category.active {
+  display: block;
+}
+
+/* Show All Button */
+.show-all-btn {
+  background: linear-gradient(135deg, #2c5f2d, #4a7c59);
+  color: white;
+  border: none;
+}
+
+.show-all-btn:hover {
+  background: linear-gradient(135deg, #1a3a1b, #2c5f2d);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .product-tabs-container {
+    top: 60px;
+    padding: 1rem 0;
+  }
+
+  .product-tabs {
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

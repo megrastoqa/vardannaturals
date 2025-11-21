@@ -305,4 +305,45 @@
   font-size: 1rem;
 }
 
+/* Breadcrumb Styles */
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #6a6a6a;
+}
+
+.breadcrumb a {
+  color: #2c5f2d;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #1a3a1b;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #8a8a8a;
+}
+
+/* Back to Categories Button */
+.back-to-categories {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c5f2d;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border: 2px solid #2c5f2d;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.back-to-categories:hover {
+  background: #2c5f2d;
+  color: white;
+  transform: translateX(-5px);
+}
 

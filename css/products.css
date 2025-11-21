@@ -127,3 +127,125 @@
   margin-top: 1.5rem;
   padding-top: 1.5rem;
 }
+
+.products-overview {
+  min-height: 100vh;
+  padding: 140px 2rem 80px;
+}
+
+.products-overview h1 {
+  color: #2c5f2d;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.products-overview > p {
+  color: #6a6a6a;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.category-card {
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-card-inner {
+  background: white;
+  border: 2px solid #e8e5e0;
+  border-radius: 15px;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.category-card:hover .category-card-inner {
+  border-color: #2c5f2d;
+  box-shadow: 0 12px 40px rgba(44, 95, 45, 0.15);
+}
+
+.category-image {
+  align-items: center;
+  background: linear-gradient(135deg, #f5f3f0, #e8e5e0);
+  display: flex;
+  font-size: 5rem;
+  height: 250px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-image::before {
+  background: radial-gradient(circle at 30% 50%, rgba(44, 95, 45, 0.05) 0%, transparent 50%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.category-content {
+  padding: 2rem;
+}
+
+.category-title {
+  color: #2c5f2d;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.category-description {
+  color: #6a6a6a;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.category-link-text {
+  align-items: center;
+  color: #2c5f2d;
+  display: flex;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.category-card:hover .category-link-text {
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .products-overview {
+    padding: 100px 1rem 60px;
+  }
+
+  .products-overview h1 {
+    font-size: 2.2rem;
+  }
+
+  .category-grid {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .category-image {
+    font-size: 4rem;
+    height: 200px;
+  }
+}

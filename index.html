@@ -16,6 +16,8 @@
   <link href="css/products.css" rel="stylesheet"/>
   <link href="css/responsive.css" rel="stylesheet"/>
   <link href="css/cart.css" rel="stylesheet"/>
+  <link href="css/tabs.css" rel="stylesheet"/>
+
 </head>
 <body>
 <header>
@@ -28,24 +30,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" href="#products">Products ▾</a>
-        <div class="dropdown-content">
-          <a href="#pain-relief">Pain Relief Solutions</a>
-          <a href="#hair-care">Hair Care Excellence</a>
-          <a href="#skin-care">Radiant Skin Care</a>
-          <a href="#soaps">Artisan Soaps</a>
-          <a href="#bath-salts">Bath Salts</a>
-          <a href="#essential-oils">Essential Oils</a>
-          <a href="#wellness">Wellness &amp; Specialty Care</a>
-          <a href="#gut-care">Herbal Gut Care</a>
-          <a href="#tea">Herbal Tea Collection</a>
-          <a href="#tools">Wellness Tools</a>
-        </div>
-      </li>
+      <li><a href="products.html">Products</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a class="cart-link-nav" href="cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
+      <li><a href="cart.html" class="cart-link-nav">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
     </ul>
   </nav>
 </header>
@@ -1211,8 +1199,10 @@
   <p style="margin-top: 0.8rem; font-style: italic; opacity: 0.9;">Made with ❤️</p>
 </footer>
 <!-- Scripts -->
+<script src="js/main.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/dropdown.js"></script>
+<script src="js/tabs.js"></script>
 <script defer="" src="js/cart.js"></script>
 </body>
 </html>
