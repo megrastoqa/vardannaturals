@@ -17,6 +17,7 @@
   <link href="css/responsive.css" rel="stylesheet"/>
   <link href="css/cart.css" rel="stylesheet"/>
   <link href="css/tabs.css" rel="stylesheet"/>
+  <link href="css/featured-carousel.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -83,62 +84,94 @@
 </section>
 
 
-<!-- Featured Products Section (OPTIONAL - Show 3-6 bestsellers) -->
+<!-- Featured Products Section with Carousel -->
 <section class="featured-products" style="padding: 80px 2rem; background: white;">
-  <div style="max-width: 1400px; margin: 0 auto;">
-    <h2 style="text-align: center; font-size: 2.5rem; color: #2c5f2d; margin-bottom: 1rem; font-weight: 300; letter-spacing: 3px;">Featured Products</h2>
-    <p style="text-align: center; font-size: 1.1rem; color: #6a6a6a; margin-bottom: 3rem;">Discover our most loved Ayurvedic essentials</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-
-      <!-- Featured Product 1 -->
-      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
-        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
-          <img src="images/kumkumadi-tailam.png" alt="Kumkumadi Tailam" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div style="padding: 2rem;">
-          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Kumkumadi Tailam</h3>
-          <p style="color: #6a6a6a; margin-bottom: 1rem;">Miraculous beauty elixir with Kashmiri saffron</p>
-          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹699</div>
-          <a href="products/skin-care.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <!-- Featured Product 2 -->
-      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
-        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
-          <img src="images/keshamrit-hair-oil.jpeg" alt="Keshamrit Hair Oil" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div style="padding: 2rem;">
-          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Keshamrit Hair Oil</h3>
-          <p style="color: #6a6a6a; margin-bottom: 1rem;">Premium blend for healthy, shiny hair</p>
-          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹499</div>
-          <a href="products/hair-care.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <!-- Featured Product 3 -->
-      <div style="background: #faf9f7; border-radius: 15px; overflow: hidden; border: 2px solid #e8e5e0; transition: all 0.3s;">
-        <div style="height: 300px; background: linear-gradient(135deg, #f5f3f0, #e8e5e0); display: flex; align-items: center; justify-content: center;">
-          <img src="images/mahanarayana-tailam.jpg" alt="Mahanarayana Tailam" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div style="padding: 2rem;">
-          <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Mahanarayana Tailam</h3>
-          <p style="color: #6a6a6a; margin-bottom: 1rem;">Relief for joint pain and muscle stiffness</p>
-          <div style="font-size: 1.3rem; color: #2c5f2d; font-weight: 600; margin-bottom: 1rem;">₹449</div>
-          <a href="products/pain-relief.html" style="display: inline-block; width: 100%; text-align: center; background: #2c5f2d; color: white; padding: 0.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-            View Details
-          </a>
-        </div>
-      </div>
-
+  <div class="container" style="max-width: 1400px; margin: 0 auto;">
+    <div class="section-header">
+      <h2 style="text-align: center; font-size: 2.5rem; color: #2c5f2d; margin-bottom: 1rem; font-weight: 300; letter-spacing: 3px;">Featured Products</h2>
+      <p style="text-align: center; font-size: 1.1rem; color: #6a6a6a; margin-bottom: 3rem;">Discover our most loved Ayurvedic essentials</p>
     </div>
 
-    <div style="text-align: center; margin-top: 3rem;">
+    <div class="featured-carousel-container">
+      <button class="featured-carousel-nav prev" id="featuredPrevBtn">‹</button>
+
+      <div class="featured-carousel-wrapper">
+        <div class="featured-carousel-track" id="featuredCarouselTrack">
+
+          <!-- Product 1 -->
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              <img src="images/kumkumadi-tailam.png" alt="Kumkumadi Tailam">
+            </div>
+            <div class="featured-product-info">
+              <h3>Kumkumadi Tailam</h3>
+              <p>Miraculous beauty elixir with Kashmiri saffron</p>
+              <div class="featured-product-price">₹699</div>
+              <a href="products/skin-care.html" class="featured-product-link">View Details</a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              <img src="images/keshamrit-hair-oil.jpeg" alt="Keshamrit Hair Oil">
+            </div>
+            <div class="featured-product-info">
+              <h3>Keshamrit Hair Oil</h3>
+              <p>Premium blend for healthy, shiny hair</p>
+              <div class="featured-product-price">₹499</div>
+              <a href="products/hair-care.html" class="featured-product-link">View Details</a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              <img src="images/mahanarayana-tailam.jpg" alt="Mahanarayana Tailam">
+            </div>
+            <div class="featured-product-info">
+              <h3>Mahanarayana Tailam</h3>
+              <p>Relief for joint pain and muscle stiffness</p>
+              <div class="featured-product-price">₹449</div>
+              <a href="products/pain-relief.html" class="featured-product-link">View Details</a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              <img src="images/kumkumadi-tailam.png" alt="Ayurvedic Face Cream">
+            </div>
+            <div class="featured-product-info">
+              <h3>Ayurvedic Face Cream</h3>
+              <p>Natural radiance for glowing skin</p>
+              <div class="featured-product-price">₹599</div>
+              <a href="products/skin-care.html" class="featured-product-link">View Details</a>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              <img src="images/keshamrit-hair-oil.jpeg" alt="Herbal Shampoo">
+            </div>
+            <div class="featured-product-info">
+              <h3>Herbal Shampoo</h3>
+              <p>Gentle cleansing with natural ingredients</p>
+              <div class="featured-product-price">₹399</div>
+              <a href="products/hair-care.html" class="featured-product-link">View Details</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="featured-carousel-nav next" id="featuredNextBtn">›</button>
+    </div>
+
+    <div class="featured-carousel-dots" id="featuredCarouselDots"></div>
+
+    <div class="view-all" style="text-align: center; margin-top: 3rem;">
       <a href="products.html" style="display: inline-block; background: #2c5f2d; color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s;">
         View All Products →
       </a>
@@ -298,5 +331,6 @@
 <script src="js/dropdown.js"></script>
 <script src="js/tabs.js"></script>
 <script defer="" src="js/cart.js"></script>
+<script src="js/featured-carousel.js"></script>
 </body>
 </html>
