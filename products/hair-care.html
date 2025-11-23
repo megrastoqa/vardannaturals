@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -56,58 +71,66 @@
     </div>
 
     <!-- Products -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Keshamrit Hair Oil" src="../images/keshamrit-hair-oil.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Keshamrit Hair Oil</div>
-        <div class="product-tagline">Nourish your roots, flaunt your shine</div>
-        <p class="product-description">Premium blend of cold-pressed natural oils and herbal extracts, carefully crafted
-          to strengthen roots, reduce hair fall, and promote healthy growth. Free from mineral oils, parabens and
-          harmful chemicals.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Brahmi, Jatamansi, Hibiscus, Rosemary, Kalonji, Methi, Himalayan
-            Herbs</p>
+    <div class="products-container">
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Keshamrit Hair Oil" src="../images/keshamrit-hair-oil.jpeg"/>
         </div>
-        <ul class="product-features">
-          <li>Strengthens roots and reduces hair fall</li>
-          <li>Free from mineral oils and parabens</li>
-          <li>Suitable for all hair types</li>
-          <li>Use twice weekly for best results</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/keshamrit-hair-oil.jpeg"
-                data-name="Keshamrit Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Anti-Dandruff Hair Oil" src="../images/anti-dandruff-hair-oil.png"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Anti-Dandruff Hair Oil</div>
-        <div class="product-tagline">Nourish your roots, flaunt your shine</div>
-        <p class="product-description">This gentle yet effective oil combines ancient herbal wisdom with modern
-          hair-care science. Regular use helps control dandruff, soothe irritation and maintain a healthy scalp
-          environment. Leaves hair soft, shiny and manageable.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Kushta, Mulethi, Triphala, Manjistha, Neem Patra, Himalayan
-            Herbs</p>
+        <div class="product-details">
+          <div class="product-name">Keshamrit Hair Oil</div>
+          <div class="product-tagline">Nourish your roots, flaunt your shine</div>
+          <p class="product-description">Premium blend of cold-pressed natural oils and herbal extracts, carefully
+            crafted
+            to strengthen roots, reduce hair fall, and promote healthy growth. Free from mineral oils, parabens and
+            harmful chemicals.</p>
+          <div class="product-ingredients">
+            <h4>Key Ingredients</h4>
+            <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Brahmi, Jatamansi, Hibiscus, Rosemary, Kalonji, Methi,
+              Himalayan
+              Herbs</p>
+          </div>
+          <ul class="product-features">
+            <li>Strengthens roots and reduces hair fall</li>
+            <li>Free from mineral oils and parabens</li>
+            <li>Suitable for all hair types</li>
+            <li>Use twice-weekly for best results</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹499 (100ml)</div>
+            <button class="add-to-cart-btn" data-image="images/keshamrit-hair-oil.jpeg"
+                    data-name="Keshamrit Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
+            </button>
+          </div>
         </div>
-        <ul class="product-features">
-          <li>Controls dandruff and soothes irritation</li>
-          <li>Maintains healthy scalp environment</li>
-          <li>Leaves hair soft and shiny</li>
-          <li>Gentle yet effective formula</li>
-        </ul>
-        <div class="product-price">₹499 (100ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="/..images/anti-dandruff-hair-oil.png"
-                data-name="Anti-Dandruff Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
-        </button>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Anti-Dandruff Hair Oil" src="../images/anti-dandruff-hair-oil.png"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Anti-Dandruff Hair Oil</div>
+          <div class="product-tagline">Nourish your roots, flaunt your shine</div>
+          <p class="product-description">This gentle yet effective oil combines ancient herbal wisdom with modern
+            hair-care science. Regular use helps control dandruff, soothe irritation and maintain a healthy scalp
+            environment. Leaves hair soft, shiny and manageable.</p>
+          <div class="product-ingredients">
+            <h4>Key Ingredients</h4>
+            <p>Cold Pressed Coconut Oil, Amla, Bhringraj, Kushta, Mulethi, Triphala, Manjistha, Neem Patra, Himalayan
+              Herbs</p>
+          </div>
+          <ul class="product-features">
+            <li>Controls dandruff and soothes irritation</li>
+            <li>Maintains healthy scalp environment</li>
+            <li>Leaves hair soft and shiny</li>
+            <li>Gentle yet effective formula</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹499 (100ml)</div>
+            <button class="add-to-cart-btn" data-image="/..images/anti-dandruff-hair-oil.png"
+                    data-name="Anti-Dandruff Hair Oil" data-price="₹499" value="100ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -11,7 +11,7 @@
   <link href="../css/products.css" rel="stylesheet">
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/category.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -55,43 +70,45 @@
     </div>
 
     <!-- Products -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Natural Digestive Support" src="../images/herbal-gutcare.jpeg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Natural Digestive Support</div>
-        <p class="product-description">Ayurvedic herbal blend formulated to provide natural relief from gas, acidity,
-          bloating and constipation. This gentle digestive support helps improve appetite and strengthens the
-          digestive
-          fire (Agni) for better absorption of nutrients.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Fennel, Cumin, Carom Seeds/Ajwain, Haritaki, Baheda, Amla, Dry Ginger, Rock Salt, Asafoetida, Mint
-            Extract
-            (Pudina Satva), Himalayan Herbs</p>
+    <div class="products-container">
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Natural Digestive Support" src="../images/herbal-gutcare.jpeg"/>
         </div>
-        <ul class="product-features">
-          <li>Relieves gas &amp; bloating</li>
-          <li>Eases acidity &amp; indigestion</li>
-          <li>Supports regular bowel movement</li>
-          <li>Improves appetite &amp; metabolism</li>
-          <li>Natural &amp; non-habit forming</li>
-        </ul>
-        <div class="product-price">₹145 (60g)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/herbal-gutcare.jpeg"
-                data-name="Natural Digestive Support" data-price="₹145" value="60g">🛒 Add to Cart
-        </button>
+        <div class="product-details">
+          <div class="product-name">Natural Digestive Support</div>
+          <p class="product-description">Ayurvedic herbal blend formulated to provide natural relief from gas, acidity,
+            bloating and constipation. This gentle digestive support helps improve appetite and strengthens the
+            digestive
+            fire (Agni) for better absorption of nutrients.</p>
+          <div class="product-ingredients">
+            <h4>Key Ingredients</h4>
+            <p>Fennel, Cumin, Carom Seeds/Ajwain, Haritaki, Baheda, Amla, Dry Ginger, Rock Salt, Asafoetida, Mint
+              Extract
+              (Pudina Satva), Himalayan Herbs</p>
+          </div>
+          <ul class="product-features">
+            <li>Relieves gas &amp; bloating</li>
+            <li>Eases acidity &amp; indigestion</li>
+            <li>Supports regular bowel movement</li>
+            <li>Improves appetite &amp; metabolism</li>
+            <li>Natural &amp; non-habit forming</li>
+          </ul>
+          <div class="product-price-section"></div>
+          <div class="product-price">₹145 (60g)</div>
+          <button class="add-to-cart-btn" data-image="images/herbal-gutcare.jpeg"
+                  data-name="Natural Digestive Support" data-price="₹145" value="60g">🛒 Add to Cart
+          </button>
+        </div>
       </div>
     </div>
-
-  <!-- Back to Products Button -->
-  <div style="text-align: center; margin-top: 4rem;">
-    <a href="../products.html"
-       style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2c5f2d; text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; border: 2px solid #2c5f2d; border-radius: 50px; transition: all 0.3s;">
-      ← Back to All Categories
-    </a>
-  </div>
+    <!-- Back to Products Button -->
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="../products.html"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2c5f2d; text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; border: 2px solid #2c5f2d; border-radius: 50px; transition: all 0.3s;">
+        ← Back to All Categories
+      </a>
+    </div>
   </div>
 </section>
 

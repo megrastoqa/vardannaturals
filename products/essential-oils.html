@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -56,102 +71,114 @@
     </div>
 
     <!-- Products -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Jasmine Essential Oil" src="../images/jasmine-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Jasmine Essential Oil</div>
-        <p class="product-description">Sweet floral aroma that uplifts mood and promotes relaxation.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Promotes relaxation &amp; emotional balance</li>
-          <li>Always dilute before skin application</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/jasmine-essential-oil.jpg"
-                data-name="Jasmine Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lavender Essential Oil" src="../images/lavender-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lavender Essential Oil</div>
-        <p class="product-description">Calming scent that eases stress and supports restful sleep.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Eases stress and promotes sleep</li>
-          <li>Natural air purifier</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/lavender-essential-oil.jpg"
-                data-name="Lavender Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lemongrass Essential Oil" src="../images/lemongrass-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lemongrass Essential Oil</div>
-        <p class="product-description">Fresh citrus aroma that energises and purifies air naturally.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Energises and purifies air</li>
-          <li>Refreshing citrus scent</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/lemongrass-essential-oil.jpg"
-                data-name="Lemongrass Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Green Apple Essential Oil" src="../images/green-apple-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Green Apple Essential Oil</div>
-        <p class="product-description">Crisp fruity fragrance that refreshes and invigorates senses.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Refreshes and invigorates</li>
-          <li>Crisp, uplifting aroma</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/green-apple-essential-oil.jpg"
-                data-name="Green Apple Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Citrus Essential Oil" src="../images/citrus-essential-oil.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Citrus Essential Oil</div>
-        <p class="product-description">Refreshing, mood-lifting natural purifier that boosts focus and freshness.</p>
-        <ul class="product-features">
-          <li>Add 3-5 drops to diffuser for aromatherapy</li>
-          <li>Mix 4-6 drops with carrier oil for massage</li>
-          <li>Boosts focus and freshness</li>
-          <li>Mood-lifting properties</li>
-        </ul>
-        <div class="product-price">₹399 (10ml)</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/citrus-essential-oil.jpg"
-                data-name="Citrus Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
+    <div class="products-container">
 
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Jasmine Essential Oil" src="../images/jasmine-essential-oil.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Jasmine Essential Oil</div>
+          <p class="product-description">Sweet floral aroma that uplifts mood and promotes relaxation.</p>
+          <ul class="product-features">
+            <li>Add 3-5 drops to diffuser for aromatherapy</li>
+            <li>Mix 4-6 drops with carrier oil for massage</li>
+            <li>Promotes relaxation &amp; emotional balance</li>
+            <li>Always dilute before skin application</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹399 (10ml)</div>
+            <button class="add-to-cart-btn" data-image="images/jasmine-essential-oil.jpg"
+                    data-name="Jasmine Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Lavender Essential Oil" src="../images/lavender-essential-oil.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Lavender Essential Oil</div>
+          <p class="product-description">Calming scent that eases stress and supports restful sleep.</p>
+          <ul class="product-features">
+            <li>Add 3-5 drops to diffuser for aromatherapy</li>
+            <li>Mix 4-6 drops with carrier oil for massage</li>
+            <li>Eases stress and promotes sleep</li>
+            <li>Natural air purifier</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹399 (10ml)</div>
+            <button class="add-to-cart-btn" data-image="images/lavender-essential-oil.jpg"
+                    data-name="Lavender Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Lemongrass Essential Oil" src="../images/lemongrass-essential-oil.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Lemongrass Essential Oil</div>
+          <p class="product-description">Fresh citrus aroma that energises and purifies air naturally.</p>
+          <ul class="product-features">
+            <li>Add 3-5 drops to diffuser for aromatherapy</li>
+            <li>Mix 4-6 drops with carrier oil for massage</li>
+            <li>Energises and purifies air</li>
+            <li>Refreshing citrus scent</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹399 (10ml)</div>
+            <button class="add-to-cart-btn" data-image="images/lemongrass-essential-oil.jpg"
+                    data-name="Lemongrass Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Green Apple Essential Oil" src="../images/green-apple-essential-oil.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Green Apple Essential Oil</div>
+          <p class="product-description">Crisp fruity fragrance that refreshes and invigorates senses.</p>
+          <ul class="product-features">
+            <li>Add 3-5 drops to diffuser for aromatherapy</li>
+            <li>Mix 4-6 drops with carrier oil for massage</li>
+            <li>Refreshes and invigorates</li>
+            <li>Crisp, uplifting aroma</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹399 (10ml)</div>
+            <button class="add-to-cart-btn" data-image="images/green-apple-essential-oil.jpg"
+                    data-name="Green Apple Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Citrus Essential Oil" src="../images/citrus-essential-oil.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Citrus Essential Oil</div>
+          <p class="product-description">Refreshing, mood-lifting natural purifier that boosts focus and freshness.</p>
+          <ul class="product-features">
+            <li>Add 3-5 drops to diffuser for aromatherapy</li>
+            <li>Mix 4-6 drops with carrier oil for massage</li>
+            <li>Boosts focus and freshness</li>
+            <li>Mood-lifting properties</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹399 (10ml)</div>
+            <button class="add-to-cart-btn" data-image="images/citrus-essential-oil.jpg"
+                    data-name="Citrus Essential Oil" data-price="₹399" value="10ml">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Back to Products Button -->
     <div style="text-align: center; margin-top: 4rem;">
       <a href="../products.html"

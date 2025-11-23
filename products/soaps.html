@@ -6,13 +6,13 @@
   <title>Artisan Soaps Collection - Vardan Naturals</title>
 
   <link href="../css/main.css" rel="stylesheet">
-  <link href="../css/cart.css" rel="stylesheet">
   <link href="../css/components.css" rel="stylesheet">
   <link href="../css/products.css" rel="stylesheet">
-  <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/category.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link href="../css/featured-carousel.css" rel="stylesheet">
+  <link href="../css/cart.css" rel="stylesheet">
+  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -54,27 +69,27 @@
       <p>Handcrafted organic soaps with natural ingredients, no parabens or sulphates</p>
     </div>
 
-    <!-- Products Container - IMPORTANT! -->
     <div class="products-container">
 
-      <!-- Product 1 -->
       <div class="product-item">
         <div class="product-image">
-          <img src="../images/shea-butter-soap.jpg" alt="Shea Butter Soap"/>
+          <img alt="Shea Butter Soap" src="../images/shea-butter-soap.jpg"/>
         </div>
         <div class="product-details">
           <div class="product-name">Shea Butter Soap</div>
           <div class="product-tagline">Zest Up Your Skin - Lemongrass Meets Shea Bliss!</div>
-          <p class="product-description">Organic soap with lemongrass and shea butter. No parabens, no sulphates, no chlorides.</p>
+          <p class="product-description">Organic soap with lemongrass and shea butter. No parabens, no sulphates, no
+            chlorides.</p>
 
           <div class="product-price-section">
             <div class="product-price">₹249 (100g) | ₹170 (55g)</div>
             <div class="product-actions">
               <select class="variant-select" id="variant-select-4">
-                <option value="100g" data-price="₹249">100g — ₹249</option>
-                <option value="55g" data-price="₹170">55g — ₹170</option>
+                <option data-price="₹249" value="100g">100g — ₹249</option>
+                <option data-price="₹170" value="55g">55g — ₹170</option>
               </select>
-              <button class="add-to-cart-btn" data-name="Shea Butter Soap" data-image="images/shea-butter-soap.jpg" data-variant-selector="#variant-select-4">
+              <button class="add-to-cart-btn" data-image="images/shea-butter-soap.jpg" data-name="Shea Butter Soap"
+                      data-variant-selector="#variant-select-4">
                 🛒 Add to Cart
               </button>
             </div>
@@ -82,24 +97,25 @@
         </div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product-item">
         <div class="product-image">
-          <img src="../images/triphala-charcoal-soap.jpg" alt="Triphala Charcoal Soap"/>
+          <img alt="Triphala Charcoal Soap" src="../images/triphala-charcoal-soap.jpg"/>
         </div>
         <div class="product-details">
           <div class="product-name">Triphala Charcoal Soap</div>
           <div class="product-tagline">Detox Deep. Breathe Easy. Lavender Calm in Every Bar.</div>
-          <p class="product-description">Organic soap with activated charcoal and lavender. No parabens, no sulphates.</p>
+          <p class="product-description">Organic soap with activated charcoal and lavender. No parabens, no
+            sulphates.</p>
 
           <div class="product-price-section">
             <div class="product-price">₹225 (100g) | ₹150 (55g)</div>
             <div class="product-actions">
               <select class="variant-select" id="variant-select-5">
-                <option value="100g" data-price="₹225">100g — ₹225</option>
-                <option value="55g" data-price="₹150">55g — ₹150</option>
+                <option data-price="₹225" value="100g">100g — ₹225</option>
+                <option data-price="₹150" value="55g">55g — ₹150</option>
               </select>
-              <button class="add-to-cart-btn" data-name="Triphala Charcoal Soap" data-image="images/triphala-charcoal-soap.jpg" data-variant-selector="#variant-select-5">
+              <button class="add-to-cart-btn" data-image="images/triphala-charcoal-soap.jpg"
+                      data-name="Triphala Charcoal Soap" data-variant-selector="#variant-select-5">
                 🛒 Add to Cart
               </button>
             </div>
@@ -107,24 +123,25 @@
         </div>
       </div>
 
-      <!-- Product 3 -->
       <div class="product-item">
         <div class="product-image">
-          <img src="../images/citrus-loofah-soap.jpg" alt="Citrus Loofah Soap"/>
+          <img alt="Citrus Loofah Soap" src="../images/citrus-loofah-soap.jpg"/>
         </div>
         <div class="product-details">
           <div class="product-name">Citrus Loofah Soap</div>
           <div class="product-tagline">Scrub Zesty, Stay Fresh - It's a Lemon Loofah Thing.</div>
-          <p class="product-description">Natural exfoliation with citrus energy. Organic soap with no parabens, no sulphates, no chlorides.</p>
+          <p class="product-description">Natural exfoliation with citrus energy. Organic soap with no parabens, no
+            sulphates, no chlorides.</p>
 
           <div class="product-price-section">
             <div class="product-price">₹200 (100g) | ₹140 (55g)</div>
             <div class="product-actions">
               <select class="variant-select" id="variant-select-6">
-                <option value="100g" data-price="₹200">100g — ₹200</option>
-                <option value="55g" data-price="₹140">55g — ₹140</option>
+                <option data-price="₹200" value="100g">100g — ₹200</option>
+                <option data-price="₹140" value="55g">55g — ₹140</option>
               </select>
-              <button class="add-to-cart-btn" data-name="Citrus Loofah Soap" data-image="images/citrus-loofah-soap.jpg" data-variant-selector="#variant-select-6">
+              <button class="add-to-cart-btn" data-image="images/citrus-loofah-soap.jpg" data-name="Citrus Loofah Soap"
+                      data-variant-selector="#variant-select-6">
                 🛒 Add to Cart
               </button>
             </div>
@@ -132,24 +149,25 @@
         </div>
       </div>
 
-      <!-- Product 4 -->
       <div class="product-item">
         <div class="product-image">
-          <img src="../images/goat-milk-soap.jpg" alt="Goat Milk Soap"/>
+          <img alt="Goat Milk Soap" src="../images/goat-milk-soap.jpg"/>
         </div>
         <div class="product-details">
           <div class="product-name">Goat Milk Soap</div>
           <div class="product-tagline">Lemongrass Energy. Goat Milk Luxury. Skin in Balance.</div>
-          <p class="product-description">Luxurious goat milk soap with lemongrass. Organic, no parabens, no sulphates, no chlorides.</p>
+          <p class="product-description">Luxurious goat milk soap with lemongrass. Organic, no parabens, no sulphates,
+            no chlorides.</p>
 
           <div class="product-price-section">
             <div class="product-price">₹275 (100g) | ₹190 (55g)</div>
             <div class="product-actions">
               <select class="variant-select" id="variant-select-7">
-                <option value="100g" data-price="₹275">100g — ₹275</option>
-                <option value="55g" data-price="₹190">55g — ₹190</option>
+                <option data-price="₹275" value="100g">100g — ₹275</option>
+                <option data-price="₹190" value="55g">55g — ₹190</option>
               </select>
-              <button class="add-to-cart-btn" data-name="Goat Milk Soap" data-image="images/goat-milk-soap.jpg" data-variant-selector="#variant-select-7">
+              <button class="add-to-cart-btn" data-image="images/goat-milk-soap.jpg" data-name="Goat Milk Soap"
+                      data-variant-selector="#variant-select-7">
                 🛒 Add to Cart
               </button>
             </div>
@@ -158,11 +176,9 @@
       </div>
 
     </div>
-    <!-- End Products Container -->
 
-    <!-- Back to Products Button -->
     <div style="text-align: center; margin-top: 4rem;">
-      <a href="../products.html" class="back-to-products">
+      <a class="back-to-products" href="../products.html">
         ← Back to All Categories
       </a>
     </div>
@@ -170,7 +186,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <p>© 2025 First Thought Technology. All rights reserved.</p>
   <p style="margin-top: 0.8rem; font-style: italic; opacity: 0.9;">Made with ❤️</p>

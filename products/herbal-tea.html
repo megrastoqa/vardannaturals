@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -54,34 +69,40 @@
       <p>A vibrant, tangy brew rich in antioxidants that revitalizes your body and uplifts your mood.</p>
     </div>
 
-    <!-- Products -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Hibiscus Tea" src="../images/hibiscus-tea.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Hibiscus Tea</div>
-        <p class="product-description">A vibrant, tangy brew rich in antioxidants that revitalizes your body and
-          uplifts
-          your mood.</p>
-        <ul class="product-features">
-          <li>Rich in antioxidants</li>
-          <li>Vibrant, tangy flavor</li>
-          <li>Revitalizes and uplifts</li>
-          <li>Caffeine-free</li>
-        </ul>
-        <div class="product-price">₹99 (10g) | ₹179 (20g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-12">
-          <option data-price="₹99" value="10g">10g — ₹99</option>
-          <option data-price="₹179" value="20g">20g — ₹179</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/hibiscus-tea.jpg" data-name="Hibiscus Tea"
-                  data-variant-selector="#variant-select-12">🛒 Add to Cart
-          </button>
+    <div class="products-container">
+
+      <!-- Products -->
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Hibiscus Tea" src="../images/hibiscus-tea.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Hibiscus Tea</div>
+          <p class="product-description">A vibrant, tangy brew rich in antioxidants that revitalizes your body and
+            uplifts
+            your mood.</p>
+          <ul class="product-features">
+            <li>Rich in antioxidants</li>
+            <li>Vibrant, tangy flavor</li>
+            <li>Revitalizes and uplifts</li>
+            <li>Caffeine-free</li>
+          </ul>
+          <div class="product-price-section">
+            <div class="product-price">₹99 (10g) | ₹179 (20g)</div>
+            <div class="product-actions">
+              <select class="variant-select"
+                      id="variant-select-12">
+                <option data-price="₹99" value="10g">10g — ₹99</option>
+                <option data-price="₹179" value="20g">20g — ₹179</option>
+              </select>
+              <button class="add-to-cart-btn" data-image="images/hibiscus-tea.jpg" data-name="Hibiscus Tea"
+                      data-variant-selector="#variant-select-12">🛒 Add to Cart
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
     <div class="product-item">
       <div class="product-image">
         <img alt="Chamomile Tea" src="../images/chamomile-tea.jpg"/>
@@ -96,81 +117,92 @@
           <li>Promotes peaceful sleep</li>
           <li>Caffeine-free</li>
         </ul>
-        <div class="product-price">₹149 (10g) | ₹259 (20g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-13">
-          <option data-price="₹149" value="10g">10g — ₹149</option>
-          <option data-price="₹259" value="20g">20g — ₹259</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/chamomile-tea.jpg" data-name="Chamomile Tea"
-                  data-variant-selector="#variant-select-13">🛒 Add to Cart
-          </button>
+        <div class="product-price-section">
+          <div class="product-price">₹149 (10g) | ₹259 (20g)</div>
+          <div class="product-actions">
+            <select class="variant-select"
+                    id="variant-select-13">
+              <option data-price="₹149" value="10g">10g — ₹149</option>
+              <option data-price="₹259" value="20g">20g — ₹259</option>
+            </select>
+            <button class="add-to-cart-btn" data-image="images/chamomile-tea.jpg" data-name="Chamomile Tea"
+                    data-variant-selector="#variant-select-13">🛒 Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Lemongrass Tea" src="../images/lemongrass-tea.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Lemongrass Tea</div>
-        <p class="product-description">A refreshing, citrus-scented detox tea that awakens the senses and supports
-          digestion.</p>
-        <ul class="product-features">
-          <li>Refreshing citrus scent</li>
-          <li>Natural detox properties</li>
-          <li>Supports digestion</li>
-          <li>Awakens the senses</li>
-        </ul>
+
+  <div class="product-item">
+    <div class="product-image">
+      <img alt="Lemongrass Tea" src="../images/lemongrass-tea.jpg"/>
+    </div>
+    <div class="product-details">
+      <div class="product-name">Lemongrass Tea</div>
+      <p class="product-description">A refreshing, citrus-scented detox tea that awakens the senses and supports
+        digestion.</p>
+      <ul class="product-features">
+        <li>Refreshing citrus scent</li>
+        <li>Natural detox properties</li>
+        <li>Supports digestion</li>
+        <li>Awakens the senses</li>
+      </ul>
+      <div class="product-price-section">
         <div class="product-price">₹89 (15g) | ₹159 (30g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-14">
-          <option data-price="₹89" value="15g">15g — ₹89</option>
-          <option data-price="₹159" value="30g">30g — ₹159</option>
-        </select>
+        <div class="product-actions">
+          <select class="variant-select"
+                  id="variant-select-14">
+            <option data-price="₹89" value="15g">15g — ₹89</option>
+            <option data-price="₹159" value="30g">30g — ₹159</option>
+          </select>
           <button class="btn-primary add-to-cart-btn" data-image="images/lemongrass-tea.jpg"
                   data-name="Lemongrass Tea" data-variant-selector="#variant-select-14">🛒 Add to Cart
           </button>
         </div>
       </div>
     </div>
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Blue Pea Tea" src="../images/blue-pea-tea.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Blue Pea Tea</div>
-        <p class="product-description">A mesmerizing blue infusion brimming with antioxidants for radiant skin and
-          calm
-          energy.</p>
-        <ul class="product-features">
-          <li>Mesmerizing blue color</li>
-          <li>Rich in antioxidants</li>
-          <li>Promotes radiant skin</li>
-          <li>Calm, natural energy</li>
-        </ul>
+  </div>
+
+  <div class="product-item">
+    <div class="product-image">
+      <img alt="Blue Pea Tea" src="../images/blue-pea-tea.jpg"/>
+    </div>
+    <div class="product-details">
+      <div class="product-name">Blue Pea Tea</div>
+      <p class="product-description">A mesmerizing blue infusion brimming with antioxidants for radiant skin and
+        calm
+        energy.</p>
+      <ul class="product-features">
+        <li>Mesmerizing blue color</li>
+        <li>Rich in antioxidants</li>
+        <li>Promotes radiant skin</li>
+        <li>Calm, natural energy</li>
+      </ul>
+      <div class="product-price-section">
         <div class="product-price">₹179 (10g) | ₹299 (20g)</div>
-        <div style="margin-top: 1rem; display:flex; flex-direction:column; gap:0.5rem;"><select class="variant-select"
-                                                                                                id="variant-select-15">
-          <option data-price="₹179" value="10g">10g — ₹179</option>
-          <option data-price="₹299" value="20g">20g — ₹299</option>
-        </select>
-          <button class="btn-primary add-to-cart-btn" data-image="images/blue-pea-tea.jpg" data-name="Blue Pea Tea"
+        <div class="product-actions">
+          <select class="variant-select" id="variant-select-15">
+            <option data-price="₹179" value="10g">10g — ₹179</option>
+            <option data-price="₹299" value="20g">20g — ₹299</option>
+          </select>
+          <button class="add-to-cart-btn" data-image="images/blue-pea-tea.jpg" data-name="Blue Pea Tea"
                   data-variant-selector="#variant-select-15">🛒 Add to Cart
           </button>
         </div>
       </div>
     </div>
-
-
-    <!-- Back to Products Button -->
-    <div style="text-align: center; margin-top: 4rem;">
-      <a href="../products.html"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2c5f2d; text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; border: 2px solid #2c5f2d; border-radius: 50px; transition: all 0.3s;">
-        ← Back to All Categories
-      </a>
-    </div>
   </div>
+  </div>
+  </div>
+
+  <!-- Back to Products Button -->
+  <div style="text-align: center; margin-top: 4rem;">
+    <a href="../products.html"
+       style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2c5f2d; text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; border: 2px solid #2c5f2d; border-radius: 50px; transition: all 0.3s;">
+      ← Back to All Categories
+    </a>
+  </div>
+
 </section>
 
 <!-- Footer -->

@@ -11,7 +11,7 @@
   <link href="../css/products.css" rel="stylesheet">
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/category.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,7 +25,22 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../products.html">Products</a></li>
+      <li class="dropdown">
+        <a href="../products.html" class="dropdown-toggle">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="../products.html">All Categories</a>
+          <a href="../products/pain-relief.html">Pain Relief Solutions</a>
+          <a href="../products/hair-care.html">Hair Care Excellence</a>
+          <a href="../products/skin-care.html">Radiant Skin Care</a>
+          <a href="../products/soaps.html">Artisan Soaps</a>
+          <a href="../products/bath-salts.html">Bath Salts</a>
+          <a href="../products/essential-oils.html">Essential Oils</a>
+          <a href="../products/wellness.html">Wellness & Specialty Care</a>
+          <a href="../products/gut-care.html">Herbal Gut Care</a>
+          <a href="../products/herbal-tea.html">Herbal Tea Collection</a>
+          <a href="../products/tools.html">Wellness Tools</a>
+        </div>
+      </li>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
       <li><a class="cart-link-nav" href="../cart.html">🛒 Cart (<span id="navCartCount">0</span>)</a></li>
@@ -56,104 +71,112 @@
     </div>
 
     <!-- Products -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Pain Relief Ayurvedic Massage Potli" src="../images/massage-potli.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Pain Relief Ayurvedic Massage Potli</div>
-        <div class="product-tagline">Quick Relief from Pain &amp; Inflammation</div>
-        <p class="product-description">100% natural herbal dry fomentation that provides quick relief from pain &amp;
-          inflammation. Helps reduce joint stiffness &amp; muscular tension while promoting better blood
-          circulation.</p>
-        <div class="product-ingredients">
-          <h4>Key Ingredients</h4>
-          <p>Sandalwood, Rock Salt, Rice Flower, Ajwain, Herbal Aromatic Powders</p>
+    <div class="products-container">
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Pain Relief Ayurvedic Massage Potli" src="../images/massage-potli.jpg"/>
         </div>
-        <ul class="product-features">
-          <li>Provides quick relief from pain &amp; inflammation</li>
-          <li>Helps reduce joint stiffness &amp; muscular tension</li>
-          <li>Promotes better blood circulation</li>
-          <li>Ideal for back, neck, knee, shoulder pain</li>
-          <li>Relaxes tired muscles and supports natural healing</li>
-        </ul>
-        <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-          <h4
-            style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-            How to Use</h4>
-          <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Heat the potli lightly on a pan/tawa for a
-            few
-            seconds. Test temperature on the back of your hand. Apply warm potli on painful areas in circular &amp;
-            tapping
-            motions. Use for 10–15 minutes. Reheat and reuse as needed.</p>
+        <div class="product-details">
+          <div class="product-name">Pain Relief Ayurvedic Massage Potli</div>
+          <div class="product-tagline">Quick Relief from Pain &amp; Inflammation</div>
+          <p class="product-description">100% natural herbal dry fomentation that provides quick relief from pain &amp;
+            inflammation. Helps reduce joint stiffness &amp; muscular tension while promoting better blood
+            circulation.</p>
+          <div class="product-ingredients">
+            <h4>Key Ingredients</h4>
+            <p>Sandalwood, Rock Salt, Rice Flower, Ajwain, Herbal Aromatic Powders</p>
+          </div>
+          <ul class="product-features">
+            <li>Provides quick relief from pain &amp; inflammation</li>
+            <li>Helps reduce joint stiffness &amp; muscular tension</li>
+            <li>Promotes better blood circulation</li>
+            <li>Ideal for back, neck, knee, shoulder pain</li>
+            <li>Relaxes tired muscles and supports natural healing</li>
+          </ul>
+          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
+            <h4
+              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
+              How to Use</h4>
+            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Heat the potli lightly on a pan/tawa for a
+              few
+              seconds. Test temperature on the back of your hand. Apply warm potli on painful areas in circular &amp;
+              tapping
+              motions. Use for 10–15 minutes. Reheat and reuse as needed.</p>
+          </div>
+          <div class="product-price-section">
+            <div class="product-price">₹299</div>
+            <button class="add-to-cart-btn" data-image="images/massage-potli.jpg"
+                    data-name="Pain Relief Ayurvedic Massage Potli" data-price="₹299">🛒 Add to Cart
+            </button>
+          </div>
         </div>
-        <div class="product-price">₹299</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/massage-potli.jpg"
-                data-name="Pain Relief Ayurvedic Massage Potli" data-price="₹299">🛒 Add to Cart
-        </button>
       </div>
-    </div>
-    <!-- Kansa Wand -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Kansa Wand" src="../images/kansa-wand.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Kansa Wand</div>
-        <p class="product-description">100% Pure Kansa (Bronze) dome with premium wooden handle. Balances skin's pH,
-          reduces inflammation, puffiness &amp; dullness. Enhances blood circulation, promotes lymphatic drainage and
-          gives
-          a natural facial glow.</p>
-        <ul class="product-features">
-          <li>Balances the skin's pH naturally</li>
-          <li>Reduces inflammation, puffiness &amp; dullness</li>
-          <li>Enhances blood circulation &amp; lymphatic drainage</li>
-          <li>Detoxifies skin and gives a natural glow</li>
-          <li>Excellent for daily facial massage &amp; stress relief</li>
-          <li>Suitable for all skin types</li>
-        </ul>
-        <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-          <h4
-            style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-            How to Use</h4>
-          <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply a few drops of facial oil or serum and
-            gently massage face and neck in circular motions for 5–10 minutes. Clean with a soft cloth after use.</p>
+      <!-- Kansa Wand -->
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Kansa Wand" src="../images/kansa-wand.jpg"/>
         </div>
-        <div class="product-price">₹699</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/kansa-wand.jpg" data-name="Kansa Wand"
-                data-price="₹699">🛒 Add to Cart
-        </button>
-      </div>
-    </div>
-    <!-- Double Sided Kansa Wand -->
-    <div class="product-item">
-      <div class="product-image">
-        <img alt="Double Sided Kansa Wand" src="../images/double-sided-kansa-wand.jpg"/>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Double Sided Kansa Wand</div>
-        <p class="product-description">Made from 100% Pure Kansa (Bronze) with dual-sided design for versatile use.
-          Ideal for both facial and body massage. Improves blood flow, lymphatic detox, and helps reduce fatigue,
-          tightness &amp; muscle tension.</p>
-        <ul class="product-features">
-          <li>Dual-sided design for versatile facial &amp; body use</li>
-          <li>Improves blood flow &amp; lymphatic detox</li>
-          <li>Helps reduce fatigue, tightness &amp; muscle tension</li>
-          <li>Enhances skin glow and elasticity</li>
-          <li>Boosts overall well-being</li>
-          <li>Durable handcrafted wooden handle</li>
-        </ul>
-        <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
-          <h4
-            style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
-            How to Use</h4>
-          <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply facial oil or body oil and massage in
-            circular motions. Use smaller side for face and larger side for body massage. Clean after each use.</p>
+        <div class="product-details">
+          <div class="product-name">Kansa Wand</div>
+          <p class="product-description">100% Pure Kansa (Bronze) dome with premium wooden handle. Balances skin's pH,
+            reduces inflammation, puffiness &amp; dullness. Enhances blood circulation, promotes lymphatic drainage and
+            gives
+            a natural facial glow.</p>
+          <ul class="product-features">
+            <li>Balances the skin's pH naturally</li>
+            <li>Reduces inflammation, puffiness &amp; dullness</li>
+            <li>Enhances blood circulation &amp; lymphatic drainage</li>
+            <li>Detoxifies skin and gives a natural glow</li>
+            <li>Excellent for daily facial massage &amp; stress relief</li>
+            <li>Suitable for all skin types</li>
+          </ul>
+          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
+            <h4
+              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
+              How to Use</h4>
+            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply a few drops of facial oil or serum and
+              gently massage face and neck in circular motions for 5–10 minutes. Clean with a soft cloth after use.</p>
+          </div>
+          <div class="product-price-section">
+            <div class="product-price">₹699</div>
+            <button class="add-to-cart-btn" data-image="images/kansa-wand.jpg" data-name="Kansa Wand"
+                    data-price="₹699">🛒 Add to Cart
+            </button>
+          </div>
         </div>
-        <div class="product-price">₹999</div>
-        <button class="btn-primary add-to-cart-btn" data-image="images/double-sided-kansa-wand.jpg"
-                data-name="Double Sided Kansa Wand" data-price="₹999">🛒 Add to Cart
-        </button>
+      </div>
+      <!-- Double Sided Kansa Wand -->
+      <div class="product-item">
+        <div class="product-image">
+          <img alt="Double Sided Kansa Wand" src="../images/double-sided-kansa-wand.jpg"/>
+        </div>
+        <div class="product-details">
+          <div class="product-name">Double Sided Kansa Wand</div>
+          <p class="product-description">Made from 100% Pure Kansa (Bronze) with dual-sided design for versatile use.
+            Ideal for both facial and body massage. Improves blood flow, lymphatic detox, and helps reduce fatigue,
+            tightness &amp; muscle tension.</p>
+          <ul class="product-features">
+            <li>Dual-sided design for versatile facial &amp; body use</li>
+            <li>Improves blood flow &amp; lymphatic detox</li>
+            <li>Helps reduce fatigue, tightness &amp; muscle tension</li>
+            <li>Enhances skin glow and elasticity</li>
+            <li>Boosts overall well-being</li>
+            <li>Durable handcrafted wooden handle</li>
+          </ul>
+          <div style="margin: 1.5rem 0; padding: 1.5rem; background: #faf9f7; border-left: 3px solid #2c5f2d;">
+            <h4
+              style="color: #2c5f2d; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">
+              How to Use</h4>
+            <p style="color: #6a6a6a; font-size: 0.9rem; line-height: 1.8;">Apply facial oil or body oil and massage in
+              circular motions. Use smaller side for face and larger side for body massage. Clean after each use.</p>
+          </div>
+          <div class="product-price-section">
+            <div class="product-price">₹999</div>
+            <button class="add-to-cart-btn" data-image="images/double-sided-kansa-wand.jpg"
+                    data-name="Double Sided Kansa Wand" data-price="₹999">🛒 Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
