@@ -195,30 +195,6 @@ Example:
 </div>
 ```
 
-### Add Image Carousel for Variants
-
-For products with multiple variants (like lip balms):
-```html
-<div class="product-image">
-    <div class="image-carousel" id="unique-carousel-id">
-        <div class="carousel-images">
-            <div class="carousel-slide">
-                <img src="images/variant1.jpg" alt="Variant 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="images/variant2.jpg" alt="Variant 2">
-            </div>
-        </div>
-        <button class="carousel-btn prev" onclick="moveCarousel('unique-carousel-id', -1)">‹</button>
-        <button class="carousel-btn next" onclick="moveCarousel('unique-carousel-id', 1)">›</button>
-        <div class="carousel-indicators">
-            <button class="carousel-indicator active" onclick="goToSlide('unique-carousel-id', 0)"></button>
-            <button class="carousel-indicator" onclick="goToSlide('unique-carousel-id', 1)"></button>
-        </div>
-    </div>
-</div>
-```
-
 ## 📱 Product Categories
 
 1. **Pain Relief Solutions** - Ayurvedic massage oils and potli
