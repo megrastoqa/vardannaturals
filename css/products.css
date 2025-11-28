@@ -265,3 +265,35 @@
   z-index: 3;
   box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);
 }
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.price-discounted {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.price-discounted.on-sale {
+  color: #e44d26;
+}
+
+.discount-badge {
+  background: #e44d26;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.7em;
+  margin-left: 5px;
+  font-weight: normal;
+}

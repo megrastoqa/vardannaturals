@@ -524,6 +524,7 @@ function handleAddToCartClick(e) {
 
   // variant selector support
   if (btn.dataset.variantSelector) {
+    console.log('🔍 Has variant selector:', btn.dataset.variantSelector);
     const sel = document.querySelector(btn.dataset.variantSelector);
     if (sel) {
       const selectedOption = sel.options[sel.selectedIndex];
@@ -545,7 +546,6 @@ function handleAddToCartClick(e) {
     if (priceText) {
       addToCart(name, priceText, variant, image);
     } else {
-      // new signature: addToCart(name, variant, image, variantSelector)
       addToCart(name, variant, image, btn.dataset.variantSelector || null);
     }
   }

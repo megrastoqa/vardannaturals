@@ -32,19 +32,19 @@ const PRODUCT_PRICES = {
     // ========================================
     // Bath Salts
     // ========================================
-    "Rose Indulgence Bath Salt": {
+    "Rose Indulgence": {
       "200g": 299,
       "400g": 499
     },
-    "Lavender Calm Bath Salt": {
+    "Lavender Calm": {
       "200g": 299,
       "400g": 499
     },
-    "Green Apple Fresh Bath Salt": {
+    "Green Apple Fresh": {
       "200g": 299,
       "400g": 499
     },
-    "Citrus Bliss Bath Salt": {
+    "Citrus Bliss": {
       "200g": 299,
       "400g": 499
     },
@@ -187,13 +187,20 @@ const PRODUCT_PRICES = {
 // ============================================================================
 
 const SALE_CONFIG = {
-  enabled: false,  // Set to true to activate sale prices
+  enabled: true,  // Set to true to activate sale prices
   saleProducts: {
-    // Example: Add sale prices here when running promotions
-    // "Shea Butter Soap": {
-    //   "100g": 199,  // 20% off from 249
-    //   "55g": 136    // 20% off from 170
-    // }
+    //Example: Add sale prices here when running promotions
+    "Shea Butter Soap": {
+      "100g": 199,  // 20% off from 249
+      "55g": 136    // 20% off from 170
+    },
+    "Citrus Bliss": {
+      "200g": 249,
+      "400g": 459
+    },
+    "Kumkumadi Tailam": {
+      "30ml": 599
+    }
   }
 };
 
@@ -261,11 +268,7 @@ function getProductVariants(productName) {
     return null;
   }
 
-  // Check for sale prices first
-  if (SALE_CONFIG.enabled && SALE_CONFIG.saleProducts[productName]) {
-    return SALE_CONFIG.saleProducts[productName];
-  }
-
+  // ALWAYS return regular prices - sale logic is handled elsewhere
   return PRODUCT_PRICES[productName];
 }
 
@@ -358,6 +361,7 @@ window.VardanPrices = {
   PRODUCT_PRICES,
   SALE_CONFIG
 };
+
 
 // Also keep functions in global scope for backward compatibility
 window.getPrice = getPrice;

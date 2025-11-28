@@ -48,15 +48,18 @@ function loadFeaturedProductPrices() {
     const priceElement = card.querySelector('.featured-product-price');
     if (!priceElement) return;
 
-    // Get price from centralized system
-    const price = getFormattedPrice(productName);
-    if (price) {
-      priceElement.textContent = price;
-      priceElement.setAttribute('data-price-loaded', 'true');
-    }
+    // Get product variants
+    const variants = getProductVariants(productName);
+    if (!variants) return;
+
+    // Get first variant
+    const firstVariant = Object.keys(variants)[0];
+
+    // Update price display with sale support
+    updatePriceDisplay(productName, firstVariant, priceElement);
+    priceElement.setAttribute('data-price-loaded', 'true');
   });
 }
-
 // ============================================================================
 // CATEGORY PAGE PRODUCTS
 // ============================================================================
@@ -80,38 +83,113 @@ function loadCategoryProductPrices() {
 }
 
 /**
- * Load prices for products WITH variants (dropdown)
- */
+* Load prices for products WITH variants (dropdown)
+*/
 function loadVariantPrices(productName, productItem, selectElement) {
-  const variants = getProductVariants(productName);
-  if (!variants) {
+  const regularVariants = PRODUCT_PRICES[productName];
+  if (!regularVariants) {
     console.warn(`No variants found for: ${productName}`);
     return;
   }
 
-  // Update display price
+  // Get the currently selected variant
+  const selectedVariant = selectElement.value;
+
+  // Update display price with sale support for selected variant
   const priceDisplay = productItem.querySelector('.product-price');
   if (priceDisplay) {
-    priceDisplay.textContent = formatPriceDisplay(productName);
+    updatePriceDisplay(productName, selectedVariant, priceDisplay);
     priceDisplay.setAttribute('data-price-loaded', 'true');
   }
 
-  // Update select options
+  // Update select options with SALE PRICES
   const options = selectElement.querySelectorAll('option');
   options.forEach(option => {
     const variant = option.value;
-    const price = variants[variant];
 
-    if (price !== undefined) {
-      // Update data attribute for cart system
-      option.setAttribute('data-price', `₹${price}`);
+    // Check if this variant is on sale
+    const isVariantOnSale = SALE_CONFIG.enabled &&
+      SALE_CONFIG.saleProducts[productName]?.[variant];
 
-      // Update option text
-      option.textContent = `${variant} — ₹${price}`;
+    let priceForCart;
+
+    if (isVariantOnSale) {
+      priceForCart = SALE_CONFIG.saleProducts[productName][variant];
+    } else {
+      priceForCart = regularVariants[variant];
+    }
+
+    if (priceForCart !== undefined) {
+      // Update data attribute for cart system with SALE PRICE
+      option.setAttribute('data-price', `₹${priceForCart}`);
+
+      // Update option text to show sale price
+      option.textContent = `${variant} — ₹${priceForCart}`;
     }
   });
 
+  // Listen for variant changes to update price display AND option data-price
+  selectElement.addEventListener('change', function() {
+    const newVariant = this.value;
+    updatePriceDisplay(productName, newVariant, priceDisplay);
+
+    // Also update the selected option's data-price in case cart reads it
+    const selectedOption = this.options[this.selectedIndex];
+    const isVariantOnSale = SALE_CONFIG.enabled &&
+      SALE_CONFIG.saleProducts[productName]?.[newVariant];
+
+    let priceForCart;
+    if (isVariantOnSale) {
+      priceForCart = SALE_CONFIG.saleProducts[productName][newVariant];
+    } else {
+      priceForCart = regularVariants[newVariant];
+    }
+
+    selectedOption.setAttribute('data-price', `₹${priceForCart}`);
+  });
+
   selectElement.setAttribute('data-price-loaded', 'true');
+}
+/**
+ * Update price display with sale strikethrough support
+ */
+function updatePriceDisplay(productName, variant, priceElement) {
+  // Get or create price spans
+  let originalPriceSpan = priceElement.querySelector('.price-original');
+  let discountedPriceSpan = priceElement.querySelector('.price-discounted');
+
+  // If spans don't exist, create them
+  if (!originalPriceSpan || !discountedPriceSpan) {
+    priceElement.innerHTML = `
+      <span class="price-original" style="display: none;"></span>
+      <span class="price-discounted"></span>
+    `;
+    originalPriceSpan = priceElement.querySelector('.price-original');
+    discountedPriceSpan = priceElement.querySelector('.price-discounted');
+  }
+
+  // Get regular price
+  const regularPrice = PRODUCT_PRICES[productName]?.[variant];
+
+  // Check if on sale
+  const isProductOnSale = SALE_CONFIG.enabled &&
+    SALE_CONFIG.saleProducts[productName]?.[variant];
+
+  if (isProductOnSale) {
+    // Show strikethrough original + sale price
+    const salePrice = SALE_CONFIG.saleProducts[productName][variant];
+    const discount = Math.round((1 - salePrice / regularPrice) * 100);
+
+    originalPriceSpan.textContent = `₹${regularPrice}`;
+    originalPriceSpan.style.display = 'inline';
+    discountedPriceSpan.innerHTML = `₹${salePrice} <span class="discount-badge">${discount}% OFF</span>`;
+    discountedPriceSpan.classList.add('on-sale');
+  } else {
+    // Show only regular price for selected variant
+    originalPriceSpan.style.display = 'none';
+    discountedPriceSpan.textContent = `₹${regularPrice}`;
+    discountedPriceSpan.classList.remove('on-sale');
+  }
 }
 
 /**
@@ -119,6 +197,7 @@ function loadVariantPrices(productName, productItem, selectElement) {
  */
 function loadSimpleProductPrice(productName, productItem) {
   const variants = getProductVariants(productName);
+
   if (!variants) {
     console.warn(`No price found for: ${productName}`);
     return;
@@ -126,25 +205,35 @@ function loadSimpleProductPrice(productName, productItem) {
 
   // Get first (and only) variant
   const variantKey = Object.keys(variants)[0];
-  const price = variants[variantKey];
 
-  // Update display price
+  // Update display price with sale support
   const priceDisplay = productItem.querySelector('.product-price');
   if (priceDisplay) {
-    if (variantKey === 'default') {
-      priceDisplay.textContent = `₹${price}`;
-    } else {
-      priceDisplay.textContent = `₹${price} (${variantKey})`;
-    }
+    updatePriceDisplay(productName, variantKey, priceDisplay);
     priceDisplay.setAttribute('data-price-loaded', 'true');
   }
 
-  // Update button data attribute
+  // Update button data attribute with SALE PRICE if applicable
   const addButton = productItem.querySelector('.add-to-cart-btn');
-  if (addButton) {
-    addButton.setAttribute('data-price', `₹${price}`);
 
-    // Also set the variant value if not already set
+  if (addButton) {
+    // Check if product is on sale
+    const isProductOnSale = SALE_CONFIG.enabled &&
+      SALE_CONFIG.saleProducts[productName]?.[variantKey];
+
+    let priceForCart;
+    if (isProductOnSale) {
+      priceForCart = SALE_CONFIG.saleProducts[productName][variantKey];
+    } else {
+      priceForCart = variants[variantKey];
+    }
+
+    addButton.setAttribute('data-price', `₹${priceForCart}`);
+
+    // IMPORTANT: Set the variant on the button so cart knows which variant it is
+    addButton.setAttribute('data-variant', variantKey);
+
+    // Also set the variant value if not already set (legacy support)
     if (!addButton.getAttribute('value')) {
       addButton.setAttribute('value', variantKey);
     }
