@@ -6,7 +6,7 @@ A beautiful, responsive website for Vardan Naturals - showcasing a holistic rang
 
 ## 🌿 About
 
-Vardan Naturals is an e-commerce website featuring premium Ayurvedic products including pain relief solutions, hair care, skincare, artisan soaps, bath salts, essential oils, and herbal teas. The website emphasizes natural ingredients, traditional Ayurvedic wisdom, and modern wellness practices.
+Vardan Naturals is an e-commerce website featuring premium Ayurvedic products including body wellness oils, hair care, skincare, artisan soaps, bath salts, essential oils, and herbal teas. The website emphasizes natural ingredients, traditional Ayurvedic wisdom, and modern wellness practices.
 
 **Tagline:** *from nature, with care*
 
@@ -197,7 +197,7 @@ Example:
 
 ## 📱 Product Categories
 
-1. **Pain Relief Solutions** - Ayurvedic massage oils and potli
+1. **Body Wellness Oils** - Ayurvedic massage oils and potli
 2. **Hair Care Excellence** - Hair oils for nourishment and dandruff control
 3. **Radiant Skin Care** - Face oils, moisturizers, face washes, gels
 4. **Artisan Soaps Collection** - Organic handmade soaps

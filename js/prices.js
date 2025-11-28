@@ -50,7 +50,7 @@ const PRODUCT_PRICES = {
     },
 
     // ========================================
-    // PAIN RELIEF SOLUTIONS
+    // BODY WELLNESS OILS
     // ========================================
     "Mahanarayana Tailam": {
       "100ml": 449,
